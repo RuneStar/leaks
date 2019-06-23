@@ -1,6 +1,11 @@
 https://pastebin.com/S3wbr31d
 http://archive.is/B6Zbt
+https://www.reddit.com/r/Mr_G_W/comments/9pq3ch/strykebow_passive_code_in_case_pastebin_expires/
 OCT 19TH, 2018
+
+---
+
+Strykebow craziness
 
 ---
 
@@ -9,14 +14,14 @@ OCT 19TH, 2018
 ^ninja_ww_sb_threshold_half=50000
 ^ninja_ww_sb_threshold_tenth=70000
 ^ninja_ww_sb_threshold_full=80000
- 
+
 ^ninja_ww_sb_threshold_quadruple_pvp=7500
 ^ninja_ww_sb_threshold_double_pvp=18750
 ^ninja_ww_sb_threshold_half_pvp=37500
 ^ninja_ww_sb_threshold_tenth_pvp=52500
 ^ninja_ww_sb_threshold_full_pvp=60000
- 
- 
+
+
 if($npcfoe!null)
 {
     if(%ninja_ww_sb_damage_stored>=^ninja_ww_sb_threshold_full) mes_typed(^chattype_spam,0,"<col=0xFF0000> Your strykebow is fully charged!");
@@ -33,5 +38,5 @@ else if($playerfoe!null)
     else if(%ninja_ww_sb_damage_stored>=^ninja_ww_sb_threshold_half_pvp) %ninja_ww_sb_damage_stored=min(^ninja_ww_sb_threshold_tenth_pvp,calc(%ninja_ww_sb_damage_stored+($damage/2)));
     else if(%ninja_ww_sb_damage_stored>=^ninja_ww_sb_threshold_double_pvp) %ninja_ww_sb_damage_stored=min(^ninja_ww_sb_threshold_half_pvp,calc(%ninja_ww_sb_damage_stored+$damage));
     else if(%ninja_ww_sb_damage_stored>=^ninja_ww_sb_threshold_quadruple_pvp) %ninja_ww_sb_damage_stored=min(^ninja_ww_sb_threshold_double_pvp,calc(%ninja_ww_sb_damage_stored+($damage*2)));
-    else %ninja_ww_sb_damage_stored=min(^ninja_ww_sb_threshold_quadruple_pvp,calc(%ninja_ww_sb_damage_stored+($damage*4)));                                        
+    else %ninja_ww_sb_damage_stored=min(^ninja_ww_sb_threshold_quadruple_pvp,calc(%ninja_ww_sb_damage_stored+($damage*4)));
 }

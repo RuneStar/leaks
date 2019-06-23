@@ -1,0 +1,13 @@
+https://twitter.com/JagexKieren/status/789004013777850368
+https://pbs.twimg.com/media/CvMawaNWAAA7pSj.jpg
+20 Oct 2016
+
+---
+
+@afriendrs Just checked out the "undead one" appearing near shilo. Not a bug! Saying certain stuff to Mosol before shilo quest can spawn one
+
+---
+
+set jmod_attackable: to 1 basevar:561
+
+set zombiequeen: to 0

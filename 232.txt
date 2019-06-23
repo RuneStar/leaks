@@ -1,0 +1,7 @@
+https://twitter.com/JagexAsh/status/487650179533664256
+https://pbs.twimg.com/media/BsR7QMgCEAAy53M.png
+11 Jul 2014
+
+---
+
+While working on in-game polls, our compiler reported that I'd not set the "eep eep cabbage" pointer. True, I hadn't.
