@@ -1,0 +1,158 @@
+https://web.archive.org/web/20090120143809/http://gowerarchive.googlepages.com:80/documents
+2001
+
+---
+
+Runescript Guide (circa 2001)
+<NOTE: Runescript is used by the Runescape server for quests, skills, etc.>
+Runescape script syntax
+Script syntax
+Scripts are a series of blocks of the format
+
+=Trigger,subject,[object]
+*command;
+*command;
+etc...
+
+Available script triggers
+The first line of each block determines when it is executed
+The following triggers are available
+
+takeobj, dropobj, useobj, wearobj, removeobj, spellobj
+talknpc, attacknpc, usenpc, killnpc, escapenpc, attackbynpc, spellnpc
+oploc1, oploc2, useloc, spellloc
+opinv, useinv, spellinv
+opbound1, opbound2, usebound, spellbound
+attackplayer, useplayer, spellplayer
+spellself, spellground, label
+
+Subject and object
+The subject is used in conjunction with the trigger to determine when the script is run.
+e.g. 'takeobj, axe' - would be triggered if the player took the axe.
+
+The 'skill', and 'use' commands use both a subject and object
+e.g. 'useobj,cow,bucket' - would trigger if you use the bucket with the cow.
+e.g. 'skillnpc,orc,shockbolt' - would trigger when casting shockbolt on an orc.
+
+The skills command can have just an object, but no subject
+e.g. 'skillnpc,_,shockbolt' - would trigger when casting shockbolt on any npc.
+
+Condition code
+The * at the start of each command line is a condition code.
+The scripts use a single status flag which it set by lines starting 'if'.
+The condition code then remains the same until changed by another if command
+If the flag is true, then lines starting with a * or + will be executed
+If the flag is false, then lines starting with a * or - will be executed
+
+Runescape script command summary
+Notes:
+One server cycle is 0.6 seconds, so 100 cycles = 1 minute
+Probabilities range from 0=impossible to 256=certain
+Misc commands
+thinkbubble();	Should only be called if the player has just triggered a 'use' script. Displays a thinkbubble above the players head which contains the object they are currently using. For instance this is used to display the axe above your head when you chop a tree down.
+ifmale();	Test the player's gender, useful for getting gender specific language correct in the scripts.
+nodefault();	Stops the game executing the default action when this script is complete. For example can be used to stop an object from being taken, or a spell being cast.
+openshop(shop);	Displays the specified shop dialog, and allows the player to buy and sell items. Doing so frees the npc, so no npc specific commands can be used after this point.
+displaybalance();	Displays the players current bank balance
+Control flow based
+Delay(delay);	Delays both the script and the player for the specified number of server cycles
+Pause(mindelay, maxdelay);	Pauses the script for a random amount of time inbetween the specified minimum and maximum. The player is free to do other stuff meanwhile, useful for making trees regrow etc.. Be very careful when using delay or pause, as the player may have logged out meanwhile. Normally this doesn't matter, but don't rely on things after it to do anything permament which affects the player (such as setting a player variable) as it may be lost.
+modpause(mindelay, maxdelay);	Similar to the pause command, except the total delay is modified by the number of players in the game. If more than 60 people are playing, the delay is calculated as: delay=(delay*60)/player-count;
+ifrandom(probability);	Randomly sets the condition flag to true or false. A probability of 0=impossible, and 256=certain
+jump(labelname);	Jumps to the script block with the trigger 'Label,labelname' The other script will not return to this one
+fork(labelname);	Starts the script block with trigger 'Label,labelname' running at the same time as this one! Be careful with this command :-) If the target block has no pause, wait, say, or npcsay commands then will behave like a gosub command. (due to non-preemptive multitasking)
+end();	Terminates processing of the current script block
+Chat based
+mes(string);	Displays the specified message at the bottom of the player screen
+say(string);	Makes the players character say the specified string, all nearby people will also see this. The command will then automatically delay the script depending on the length of the string.
+multi2(string, label, string, label);	Displays a multiple choice menu with 2 items, depending which the players chooses the relevant block of script will be called. Note: The player may decide not to choose either item in which case the script terminates
+multi3(string, label, string, label, string, label);	Displays a multiple choice menu with 3 items
+multi4(string, label, string, label, string, label, string, label);	Displays a multiple choice menu with 4 items
+Movement based
+changelevel(int level);	Moves the player to the specified level, without changing the x and y position. Level-codes: 0=ground floor, 1=1st floor, 2=2nd floor, 3=basement
+changelevelup();	Moves the player up one level if possible.
+changeleveldown();	Moves the player down one level if possible.
+Stat based
+ifstatrandom(stat, base-probability, top-probability);	Like the random command but stat modified, if the stat is 0 the base-probability is used, if the stat is 100 the top-probability is used. If the stat is inbetween then the 2 values are interpolated.
+advancestat(stat, base, exp);	Permanently increases the specified stat, and sets the new levels as the current normal. The equation used is: stat+=base+exp*stat;
+addstat(stat, constant, percent);	Temporarily adds constant+(current*percent)/100 to the 2nd players specified stat. Where current is the current level of the stat
+substat(stat, constant, percent);	Like addstat, except it subtracts.
+healstat(stat, constant, percent);	Like addstat, but won't take the players stat above the normal level
+ifstatup(stat);	Sets the condition to true if the players stat is currently above the normal level, false otherwise
+ifstatdown(stat);	Sets the condition to true if the players stat is currently below the normal level, false otherwise
+ifstatabove(stat,value);	Sets the condition to true if the players stat is above (but not equal to) the specified value, false otherwise
+ifstatatleast(stat, variable, value);	Sets the condition to true if the players stat is more than or equal to getvar(variable)+value, false otherwise
+giveqp(value);	Gives the player the specified number of quest points
+ifqp(value);	Sets the condition to true if the players quest points are more than or equal to the specified value, false otherwise
+Variable based
+ifvar(variable, value);	Sets the condition flag to true if the variable is equal to the specified value. Sets false otherwise
+ifvarmore(variable, value);	Sets the condition flag to true if the variable is greater than (but not equal to) the specifed value. Sets false otherwise
+ifvarless(variable, value);	Sets the condition flag to true if the variable is less than (but not equal to) the specifed value. Sets false otherwise
+setvar(variable, value);	Sets the variable to the specified value. A variable can only hold the value 0-127. Always try to zero variables when they are no longer needed to save memory.
+addvar(variable, value);	Adds the specified amount to the variables value. A variable can only hold the value 0-127.
+subvar(variable, value);	Subtracts the specified amount to the variables value. A variable can only hold the value 0-127.
+randomvar(value);	Sets the variable 'random' to a random integer between 0 and value-1
+addbigvar(variable, value);	Add the specified value to the variable. A big-variable can hold values between 0-268435455
+subbigvar(variable, value);	Subtracts the specified value from the variable. A big-variable can hold values between 0-268435455
+ifbigvarmore(variable, value);	Same as ifvarmore except for big-variables
+Coordinate based
+These commands all require a map coordinate to operate. The coordinate used can be set using the setcoord command below. If the setcoord command is not used the system will attempt to use the coordinate of the item the player is currently interacting with.
+setcoord(coordinate);	Sets the active coordinate to the specified absolute position. The coordinate can only be worked out with the aid of the runescape map editor.
+playercoord();	Sets the active coordinate to the players current position.
+addobject(object, count, time);	Adds the specified object at the active coordinate. If the object is stackable - count indicates how many to place in the stack. Time indicates how long in server cycles before the object despawns.
+addnpc(npc);	Spawns the specified npc at the active coordinate.
+addloc(location);	Adds the specified location at the active coordinate.
+ifblocked();	Sets the condition flag to true if the square indicated by the activate coordinate is currently blocked, sets false otherwise
+teleport();	Teleports the player to the active coordinate.
+showeffect(type);	Displays a special effect animation of the specified type at the active coordinate.
+Inventory based
+give(object, count);	Gives the specified number of the specified object to players inventory
+remove(object, count);	Removes the specified number of the specified object from players inventory (or as many as possible)
+ifworn(object);	Sets condition flag to true if player is wearing specified object
+ifheld(object, count);	Sets condition flag to true if player is holding specified object
+The commands below may only be used when player is interacting with an object in their inventory
+sellinv(percentage);	Removes the active inventory object from the players inventory, and replaces it with the specified percentage of it's value in gold coins
+delinv();	Deletes the active inventory object from the players inventory
+Object based
+These commands may only be used when a player is interacting with an object on the ground
+ifobjectvisible();	Sets the condition code to true if a line of sight can be traced between the player and the object, false otherwise
+takeobject();	Removes the object from the ground and places it in the players inventory
+delobject();	Removes the object from the world
+Location based
+These commands may only be used when a player is interacting with a location
+changeloc(location);	Changes the location to the new specified location type
+upstairs();	Moves the player up a level, and adjusts their position horizontally to account for the stairs
+downstairs();	Moves the player down a level, and adjusts their position horizontally to account for the statis
+delloc();	Removes the location from the world
+Boundary based
+These commands may only be used when a player is interacting with a boundary
+changebound(boundary);	Changes the boundary to the new specified boundary type
+boundaryteleport();	Walks the player through the boundary to the opposite side. Useful for locked doors, and secret pasages.
+Npc based
+ifnearnpc(npc);	Attempt to find a nearby npc of the type specified. Sets the condition flag to true if sucessful. If succesful the player is marked as interacting with the npc so the other npc commands can also be used.
+ifnearvisnpc(npc);	Simliar to ifnearnpc, except the npc must be within 8 squares, and there must be a line of sight between the player and npc for the command to succeed.
+The commands below may only be used when player is interacting with an npc
+npcsay(string);	Makes the npc say the specified string, all nearby people will also see this. The command will then automatically delay the script depending on the length of the string.
+npcbusy();	Sets the npc to busy, and stops it walking around. Not normally necessary as the system attempts to trigger this automatically.
+npcunbusy();	Sets the npc to unbusy, and allows it to walk around again. Not normally necessary as the system attempt to trigger this automatically.
+shootnpc(projectile);	Fires a projectile at the npc
+npcattack();	Causes the npcs to pursue and attack the player
+ifnpcvisible();	Sets the condition code to true if a line of sight can be traced between the player and npc
+addnpcstat(stat,constant,percent);	Temporarily adds constant+(current*percent)/100 to the npcs specified stat
+subnpcstat(stat,constant,percent);	Like addnpc stat, except it subtracts
+healnpcstat(stat,constant,percent);	Like addnpc stat, but won't take npcs stat above the normal level
+ifnpcstatup(stat);	Sets the condition to true if the npcs specified stat is currently above the normal level, false otherwise
+ifnpcstatdown(stat);	Sets the condition to true if the npcs specified stat is currently below the normal level, false otherwise
+delnpc();	Removes the npc from the world
+changenpc(npc);	Changes the npc into a the new npc type specified!
+npcretreat(time);	Causes the npc to run away from the player for the specified number of server cycles
+Other player based
+These commands may only be used when a player is interacting with another player.
+addplaystat(stat, constant, percent);	Temporarily adds constant+(current*percent)/100 to the 2nd players specified stat. Where current is the current level of the stat
+subplaystat(stat, constant, percent);	Like addplaystat, except it subtracts.
+healplaystat(stat, constant, percent);	Like addplaystat, but won't take the players stat above the normal level
+ifplaystatup(stat);	Sets the condition to true if the 2nd players stat is currently above the normal level, false otherwise
+ifplaystatdown(stat)	Sets the condition to true if the 2nd players stat is currently below the normal level, false otherwise
+omes(string);	Displays a message on the 2nd players screen
+ifplayervisible();	Sets the condition code to true if a line of sight can be traced between the 2 players, false otherwise
+shootplayer(projectile);	Fires a projectile at the 2nd player
