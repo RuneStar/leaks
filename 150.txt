@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/621708425194512384
+https://twitter.com/JagexAsh/status/621728306329743360
+16 Jul 2015
+
+---
+
+In cs2, do you have to put how many arguments you want to pass in script config file?
+
+---
+
+You define the script with a list of the arguments it should take. It supports up to 50, one of which can be an array.

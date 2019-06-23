@@ -1,0 +1,12 @@
+https://twitter.com/TheCrazy0neTv/status/1004914697961984000
+https://twitter.com/JagexAsh/status/1005012224052785152
+8 Jun 2018
+
+---
+
+When you write a script there is "proc" and "clientscript" as the types, what are the differences? I thought "proc" was if it returned anything, but I see a pic of one that is a proc that returns nothing. (
+poll_results_addquestion)
+
+---
+
+A "procedure" is a bit of script that can be called from other triggers; it can take up to 50 arguments and return up to 50 values if we like, but it doesn't have to. A clientscript is a bit of script called from an "event" (such as on-click) on an interface component.

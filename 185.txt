@@ -1,0 +1,15 @@
+https://twitter.com/JagexAsh/status/561156589106003969
+https://pbs.twimg.com/media/B8mg8XaCEAAFkSI.png
+30 Jan 2015
+
+---
+
+GE building GFX archive! They'll need converting to the @OldSchoolRS model format next. GE launching in a few weeks.
+
+---
+
+Are these brand new codes or are they branded off the RS3 version and require conversion to 07RS template?
+
+---
+
+They'd been updated to a new format at some point after 2007. We have to convert them back, yeah.

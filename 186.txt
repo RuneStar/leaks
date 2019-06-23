@@ -1,0 +1,15 @@
+https://twitter.com/JagexAsh/status/567745544488255490
+https://pbs.twimg.com/media/B-EJj8_IQAEvMSU.png
+17 Feb 2015
+
+---
+
+I got a strange feeling of deja-vu working on the grimy herb change! It's due out with the GE, hopefully on 26th Feb.
+
+---
+
+That isn't true, you could change the games inertial ID names, but it would be too much effort changing it in all the other code!
+
+---
+
+Find/Replace would make that easy in the code. But the game wouldn't know how to read all your saved game profiles anymore.

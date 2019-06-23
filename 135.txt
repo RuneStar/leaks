@@ -1,0 +1,7 @@
+https://twitter.com/JagexWolf/status/847437885217427457
+https://pbs.twimg.com/tweet_video_thumb/C8Kzt6mXQAA4Lii.jpg
+30 Mar 2017
+
+---
+
+Here's a little peak at how we create inventory models: We actually manipulate full 3D models by re-positioning/zooming with an editor.

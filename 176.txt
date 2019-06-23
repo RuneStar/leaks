@@ -1,0 +1,12 @@
+https://twitter.com/SynqShot/status/1008362928884649984
+https://twitter.com/JagexAsh/status/1008663785849151489
+https://pbs.twimg.com/media/Df9-HMlWkAErHhX.jpg
+18 Jun 2018
+
+---
+
+Currently, when brewing down in the middle of a room during the Theatre of Blood, your stats do not restore completely upon completion of the room. Is this intentional? Overlooked?
+
+---
+
+It looks pretty specifically intentional to me. If the dev really wanted to cover all stats, but accidentally forgot to type any of the other ones, that'd be pretty bizarre.

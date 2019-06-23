@@ -1,0 +1,29 @@
+https://secure.runescape.com/m=news/a=62/left-click-range-cooking-slayer-helm-recolour-and-player-survey?oldschool=1
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-09-14/kieren.png
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-09-14/kieren4.png
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-09-14/kieren5.png
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-09-14/struct.png
+13 September 2018
+
+---
+
+This is one of those updates that from the outside looks as though it’ll be entirely straight forward… but is far from it! It even convinced me, I took the job expecting it to take me inside a day, but it turned into much more than that (it took me about 5 days of solid work or so in the end). 
+
+Why Mod Kieren? Why does it take so long to add left click cooking? Well, I’m going to try to explain the infrastructure we used to have and the infrastructure we have now. 
+
+Before this update, the only way to cook was to use your raw item on the range/fire. This is super useful for us, as it provides us information directly – we know straight away exactly which item you’d like to cook. Mostly that means we just need to ask you how many you want to make and proceed into the core cooking process. We then pass data into the cooking system relevant to the item you’re trying to cook. 
+
+In the process mentioned there, ~cooking_getquantity asks you how many you’d like to make, and assuming you want to make at least 1, we pass data into the system – these are all the things we need to know, such as what item it turns into when you succeed, when you fail, what messages to give, how much experience to give, what are the chances of success etc. 
+
+Now the problem is… when left clicking on the range, I don’t know which item you’re trying to cook. You could have 25 steel bars, a raw trout, a raw salmon and a raw lobster in your inventory. I need a way to know that firstly, the steel bars aren’t cookable, and put together a choice screen for you to choose from the items that are. That code above isn’t very helpful for that, it’s all written out long hand inside the trigger for using an item on a range. To make matters worse, it’s written out in three different places! The trigger for using items on the Lumbridge Range, fires and then other ranges. They each offer slightly different chances of success, fires use different animations, and certain items can only be cooked on fires or ranges! 
+
+Whilst the Lumbridge Range is known for supplying slightly decreased burn rates, it only applies to a small subset of all cookable items, and the Cooking Gauntlets are similar too, adding further complications. 
+
+The ideal situation, would be a centralised piece of code which is used for fires and all ranges alike – giving the appropriate restrictions and chances as above. There are still two types of interaction though following this update…left click ‘Cooking’ and using a raw item on the cooking device. In one situation, I know what raw item you want to cook, and in the other I need to compile a list of items you could cook from the items in your inventory. Writing data in two places leads to mistakes and extra work for adding future cookable items. This led to the tedious task of converting it all to use a data structure system. 
+
+These are what we call structs, they’re simply an entity that stores data. There are two sets of structs:
+There’s a struct for the ‘raw items’, this contains information about the raw object, what it can turn into, level requirements to cook it, restrictions on cooking it on fires or ranges, text for certain messaging etc.
+There’s then a struct for the ‘cooked items’, this contains information about cooking that particular item, what are the chances of cooking it (on ranges, on fires, on the lumbridge range, and on cooking gauntlets potentially!).
+This should store all of the information we need to know about cooking that raw into that product – it is a combination of those long hand written out sets of data you saw above from cooking on fires, lumbridge ranges and all other ranges. 
+
+Now I can much more readily read this data in multiple places! When you use an item, I can verify it’s a cookable item by checking if it has one of these structs associated with it. When you use the new left click cook option, I can check your whole inventory for items that fit the bill too! Now the make-x system does only allow 10 options, so I have to limit it to the first 10 potential products I find in your inventory – but hey, I think that’s going to cover anyone’s culinary desires. 

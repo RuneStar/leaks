@@ -1,0 +1,20 @@
+https://twitter.com/TheCrazy0neTv/status/978365119846592514
+https://twitter.com/JagexAsh/status/978615662796066816
+https://pbs.twimg.com/media/DZS9u5QX4AA6NE_.jpg
+27 Mar 2018
+
+---
+
+Could you possible show how defining varps and varbits look?
+
+---
+
+The VARP's on the left, with a VARBIT using it on the right.
+
+---
+
+What is protect on the VarP for?
+
+---
+
+Controls whether or not a script needs 'exclusive' access to the player to be allowed to edit it. Helps avoid concurrency issues.

@@ -1,0 +1,33 @@
+https://www.reddit.com/r/runescape/comments/86rgn4/why_does_set_active_for_a_quest_put_a_marker_on/
+https://www.reddit.com/r/runescape/comments/86rgn4/why_does_set_active_for_a_quest_put_a_marker_on/dw7ciyz/
+Mar 24 2018
+
+---
+
+Why does "Set Active" for a quest put a marker on the world map but not minimap?
+ 
+Seems odd doesn't it?
+
+---
+
+Funnily enough, I was just looking into that this week. I've been overhauling our (many) quest systems to reduce dev time, plugin points, and data duplication to create and maintain quests.
+
+One (of many) factors of that is that if we wanted an in-world breadcrumb trail and hint arrow to the start of a quest, this needed to be manually coded as an exception in the task system (which is partially deprecated by the new achievement system).
+
+The "Start of <quest name>" worldmap marker you describe is also currently a static mapelement that the quest developer needs to configure to specifically appear for their quest (in addition to separate mapelements for the quest start and in progress icons, not to mention all that blue box highlighting of objectives throughout the quest).
+
+When/if this system overhaul goes out, I've decoupled and automated that process so when you set a quest to active at not started state, it'll generate a trail and map marker automatically and dynamically, and take into account routing coordinates to interior mapsquares.
+
+One less thing a developer has to do (or forget to do, or redo if the quest giver moves during development) so they can spend that time on the quest.
+
+To answer your question more practically, it's because we have a lot more content developer functionality available on the world map.
+
+The minimap is a layer with a custom ID on which the engine renders the nearby terrain.
+
+There are some commands we can send to the minimap, like the position of a hintarrow on the minimap, but the engine takes care of rendering it. There's very little a content developer can do to manipulate the minimap.
+
+The worldmap has more content-side customisation features and its UI is mostly written in RuneScript. That "Start of <quest name>" is a mapelement we can dynamically apply to a coordinate on the worldmap, but the minimap is a closed system that doesn't render those components.
+
+It's why for example minimap icons don't display hover tooltips or map labels like on the worldmap.
+
+That's the sort of feature that would have to be added to the minimap by engine developers, who have higher priorities like improving the NXT client, asset pipeline and mobile support.

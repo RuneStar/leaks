@@ -1,0 +1,21 @@
+https://twitter.com/vladimira_k/status/732219603883937792
+https://twitter.com/JagexAsh/status/732239798740615168
+https://twitter.com/vladimira_k/status/732251109910253568
+https://twitter.com/JagexAsh/status/732589821181501441
+16 May 2016
+
+---
+
+@JagexAsh do you define arrays with "def_array"?
+
+---
+
+No, def_int $variable(5) would define an INT array with length 5.
+
+---
+
+So, would you do $variable(0) to  access it? E.g., $variable(2) = 2;
+
+---
+
+Yup.

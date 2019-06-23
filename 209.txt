@@ -1,0 +1,20 @@
+https://twitter.com/VeeYeee/status/1121648811766456321
+https://twitter.com/JagexAsh/status/1121828615296049158
+https://pbs.twimg.com/media/D5GJHDsWwAE8v-m.jpg
+26 Apr 2019
+
+---
+
+Does the Jagex map editor use a Java look & feel or is it a custom UI style?
+
+---
+
+It's written in Java.
+
+---
+
+The newer dev streams show a black UI, how was that done?
+
+---
+
+There's a newer edition that the artists have been using recently. I'm not on that version yet.

@@ -1,0 +1,59 @@
+https://secure.runescape.com/m=news/a=62/master-clue-reward-and-quality-of-life-changes?oldschool=1
+https://oldschool.runescape.wiki/w/Update:Master_Clue_Reward_and_Quality_of_Life_Changes
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-04/spellbook_rewrite_1.png
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-04/spellbook_rewrite_2.png
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-04/spellbook_rewrite_3.png
+04 October 2018
+
+---
+
+Adding a filter to the spellbook for Mobile users was a bigger job than it sounds. It should be easy hiding spells that you don't have the level or runes to cast, right? Similarly, switching to bigger icons if there aren't many remaining should be straightforward. "If the spell needs law runes, and you have no law runes, don't draw it, and if there are only ~20 icons remaining, draw them all bigger."
+
+The problem was that the game never had a look-up table that could do the check.
+
+It's a legacy code thing. Back in 2004 when RuneScape 2 came out, runescript didn't have all the features it does today, especially when it comes to look-up tables and data structures (see what a decade of engine work gets you). So data tended to be written into the code directly, and that's how it continued. In this example from Varrock Teleport, the code would check for level 25 and abort if you hadn't got it. Then it'd check for the specified runes, and abort if you hadn't got those.
+
+It was the same for the spellbook interface. When the Varrock Teleport button loaded, it would run some code, passing in the GFX, the level requirement, the name and description, and the runes, so that when a player hovered over the spell they'd have a tooltip generated to show that info. The code could generate tooltips but it couldn't do anything else.
+
+Spells with multiple forms would have all this data written into all the code versions separately. For example, Weaken had the level and rune checks written into its PvM version and also into its PvP version, and these had to match whatever was written into the spellbook interface. For spells that could be autocast, the level and rune checks were written out yet again, so the game could check whether you should be allowed to set that spell for autocasting.
+
+That doesn't work very well for this filter update. "If the spell needs law runes, and you have no law runes, don't draw it..." - but none of the code described above would be able to do that. We'd got code on the server that could decide whether or not to cast the spell, and code on the client that could decide how to draw a tooltip, but none of these could make the spellbook interface decide not to show the icon at all, nor shuffle the remaining icons into a grid.
+
+For this update, we had the choice of doing a quickie job by writing a separate bit of code that would run the level & rune checks for each spell to hide them, shuffling the remaining icons into a grid. That wouldn't take long, but it would have left us with yet another piece of code with the data duplicated into it. We decided to do a more thorough job.
+
+Each spell now has a data structure, listing all its core attributes. We can now refer to this directly from any piece of code, both on the server and client. The same data can now be read by:
+
+Attempting to cast a spell on an NPC.
+Attempting to cast a spell on a player.
+Setting up the tooltip on the spellbook interface.
+Deciding whether to show the spell on the spellbook interface, and rearranging other spells accordingly.
+Attempting to choose the spell for autocasting.
+Setting up the tooltip on the autocast interface.
+Any kinds of future update, such as offering the info on the skill-guide...
+
+The data entry took over a week due to all the oddities of various spells. Oddly enough, rewriting the code of the spellbook interface to read this data instead of what it had before, and to generate its layout accordingly, took only a day - albeit a day with quite a late night in the office. A further day (and late night) was spent building in a filter menu for Mobile users, and gave them an option for bringing up the tooltip on mobile devices, which they previously couldn't.
+
+That just left us to rewrite the server code for each spell to read this data too. There are 176 spells (counting Home Teleport and Bounty Teleport on each spellbook where they appear) so that was a rather large job, especially as any error would likely lead to serious bugs. This took over a week. While we were editing each spell, we also moved the 'combat delay' code slightly in each one, so that if you try to cast a spell for which you don't have the runes, you won't be 'delayed' from casting more spells - that might be handy for those of us without pinpoint clicking precision.
+
+Some unrelated code needed rewriting too. The Great Olm's fires can be extinguished by water spells, and the code for those needed editing to use this data so that it stays reasonably maintainable. Similarly the spell tablet creation process uses this data, both for POH tablets and the Arceuus ones.
+
+Once all that was done, the testers were able to begin checking each spell individually. Over the course of about 3 weeks, each spell was checked for:
+
+Level requirement.
+Rune requirements.
+Rune deletion.
+F2P/members availability (taking into account that some spells are permitted specially in LMS).
+Combat delay against an NPC.
+Combat delay against a player.
+Autocast handling.
+Spell tablets.
+
+Unfortunately, the final thing to be checked was the F2P/members availability. That turned out to be where the most severe bug was found during testing - an engine feature being used to read this data turned out not to handle members' data correctly on F2P. It turned out that we'd not used that bit of the engine in this way before, and hadn't encountered this problem with it. So, with that critical bug being found this week, we've had to push the spellbook update back to next week (Thursday 11th October). Your continued patience is very much appreciated.
+
+To desktop users, the spellbook ultimately doesn't look much changed, other than that we fixed the inconsistent column spacing on the Ancient spellbook, and listed the spell ingredients in a more consistent order throughout. But under the hood there's been a vast amount of maintenance done over the last few weeks. Maybe that's not a benefit for players now, but in the game's future it really should be.
+
+As you'll have gathered, there's a lot of scope for error in a rewrite of this scale. Incorrect transcription of data could lead to spells requiring the wrong runes or levels. Incorrect adaptation of the spell code could lead to spells having no combat delay (enabling 1-tick spellcasting), or deleting the runes off you twice, or even just crashing you offline. We've worked very hard on to get the data correct and to check each aspect of each spells individually, but with a project this size, there's a real likelihood of something being wrong somewhere.
+
+If you do run into problems, just right-click the Report button in the game (or long-press it if you're on Mobile) to find the bug report form, where you can let the testers know quickly and conveniently. And thanks for your patience while we invest in making the OSRS codebase more manageable for the future!
+
+- Mod Ash 

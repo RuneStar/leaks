@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/666732977536258050
+https://twitter.com/JagexAsh/status/667052669450723328
+18 Nov 2015
+
+---
+
+in the smith_generic picture at the bottom what's a weakqueue? How many types of queues are there and why so many params?
+
+---
+
+A weakqueue is cancelled if the player clicks away - commonly used for Make-X. Queues are weak / strong / normal.

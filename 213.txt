@@ -1,0 +1,22 @@
+https://twitter.com/Chrischis2/status/653665824725692417
+https://twitter.com/JagexAsh/status/654366476674183168
+14 Oct 2015
+
+---
+
+@JagexAsh How do u define player vars in RuneScript?
+
+---
+
+@Chrischis2 To define %myvariable, I'd write this in a ".varp" file:
+[myvariable]
+type=int (or coord or obj, etc.)
+scope=perm (or temp)
+
+---
+
+@JagexAsh Perm is saved on player log out I'm guessing?
+
+---
+
+@Chrischis2 Yes, and temp is not. Why do you care about the details of our syntax?

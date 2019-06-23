@@ -1,0 +1,14 @@
+https://twitter.com/TheCrazy0neTv/status/1128047766528299010
+https://pbs.twimg.com/media/D6ehIsEWAAAaWI-.png
+https://twitter.com/JagexAsh/status/1128089933699321856
+13 May 2019
+
+---
+
+What do the designers call these different shapes in the map editor? E.g. the bottom 2 rows appear to be specifically for roofing.
+
+---
+
+Top row is 5 shapes of wall. Second row is 5 shapes of wall decor - imagine those blobs as pictures hanging on a wall.
+Third row is: Tile-filling scenery, Diagonal tile-filling scenery, ground decor, NPC, object.
+The bottom two are indeed roof.

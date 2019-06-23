@@ -1,0 +1,13 @@
+https://twitter.com/JagexAsh/status/1095653912743460865
+https://twitter.com/JagexAsh/status/1095667024200650752
+https://pbs.twimg.com/media/DzSXVxOXcAALf5h.png
+13 Feb 2019
+
+---
+
+ap triggers can be executed at a distance, requiring line-of-sight. op triggers must be executed from an adjacent tile, requiring line-of-walk.
+Basically, one's like ranging, the other's like melee.
+
+---
+
+I don't know that one. "op" was presumably "operate", and I guess Andrew just chose an alternate vowel.

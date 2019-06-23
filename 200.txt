@@ -1,0 +1,14 @@
+https://twitter.com/JagexKieren/status/1019899697585184768
+https://pbs.twimg.com/media/DidpVRVXkAYmlZZ.jpg
+19 Jul 2018
+
+---
+
+To those asking about the Theatre of Blood feedback tweaks... I've finished working on them and they're now awaiting testing. Hopefully see them in the near future!
+
+---
+
+- Sotetseg projectiles no longer vary in travel time.
+- Sotetseg's prayer disable effect is now shortened
+- Verzik's mage and range attack on P3 consider your prayer upon arrival
+- Nylocas boss can no longer attack for a few cycles after switching form

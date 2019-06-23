@@ -1,0 +1,7 @@
+https://twitter.com/AndrewCGower/status/968909452782063618
+https://twitter.com/JagexAsh/status/968921971508510733
+28 Feb 2018
+
+---
+
+Sounds familiar. OSRS has true, false, -1 (the usual kind of null) and 16383 (the other kind of null you get by writing "default=null" in a .param file for non-integer types).

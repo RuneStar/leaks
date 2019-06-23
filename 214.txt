@@ -1,0 +1,35 @@
+https://twitter.com/chrisalexanderp/status/760660832422363136
+https://twitter.com/JagexAsh/status/761111586815619072
+4 Aug 2016
+
+---
+
+@JagexAsh What are the different var types?
+
+---
+
+Very many. Int, string, NPC-type, NPC-UID, player-UID, LOC-type, OBJ-type, coord, instance-UID and many many more.
+
+---
+
+I mean the vars such as player and npc set by the "setvar" command.
+
+---
+
+That cheat can work on any player variable of any type; they're all ultimately INTs inside the engine.
+
+---
+
+so what other types of variables are there besides player?
+
+---
+
+Data can be stored per player, or per NPC, or per game world.
+
+---
+
+that's it? I would think bank placeholders would need object variables.
+
+---
+
+It wasn't intended to be an exhaustive list. As you're aware, data can be stored on objects too.

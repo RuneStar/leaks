@@ -1,0 +1,40 @@
+https://twitter.com/Dalek_Cookie/status/793760385778216960
+https://twitter.com/JagexKieren/status/793764664320598017
+https://pbs.twimg.com/media/CwQEtbaWgAAQvpd.jpg
+https://twitter.com/JagexKieren/status/793796447191830529
+https://twitter.com/JagexKieren/status/793796574761607168
+2 Nov 2016
+
+---
+
+Are clean torstols from master clues rare?
+
+---
+
+They are on the mega rare table :)
+
+---
+
+169: // Very rare stuff
+170: [proc,trail_mastermegarare]()(namedobj,int)
+171: def_int $random = random(9);
+
+179: if ($random = 6) return(cert_torstol,50);
+180: if ($random = 7)
+181: {
+
+---
+
+If item is tradeable, engine automatically creates another item config with "cert_" infront of the normal name!
+
+---
+
+Similarly, after the addition of placeholders, we have "placeholder_" for the semi transparent version :P
+
+---
+
+So what would happen if you added a placeholder_torstol as a drop? Just curious
+
+---
+
+It would not work :P. We have a template config for these, and they are "dummyitems" so are limited.

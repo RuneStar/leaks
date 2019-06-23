@@ -1,0 +1,11 @@
+https://twitter.com/JagexAsh/status/509303661173153792
+https://twitter.com/JagexAsh/status/509308916547981313
+9 Sep 2014
+
+---
+
+The random event update appears to have shrunk the @OldSchoolRS codebase by 10k lines and 620 models. Nice.
+
+---
+
+@Eu_Scape Just shy of a million lines of serverscript, plus another 21k on the client.

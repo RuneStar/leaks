@@ -1,0 +1,22 @@
+https://twitter.com/JagexSova/status/879709051894067201
+https://pbs.twimg.com/media/DDVaP0FXsAMYpla.jpg
+27 Jun 2017
+
+---
+
+Just so people don't get carried away the dialogue differences are very small. I've minimised most of the enums so you just get a taste.
+
+---
+
+What's the difference between autoint and int?
+
+---
+
+autoint means this enum is indexed sequentially with ints, no gaps, and i cba to type out 0,1,2,3,4 etc int requires you to specify a key
+
+---
+
+an int enum would be like 
+val=1,blah
+val=3,blah
+val=76,blah

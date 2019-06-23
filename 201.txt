@@ -1,0 +1,27 @@
+https://twitter.com/JagexAsh/status/474947202167496705
+https://pbs.twimg.com/media/BpdZ9mWIYAAYoLj.png:large
+6 Jun 2014
+
+---
+
+"~" is gosub(), "@" is jump().
+
+---
+
+No difference. If you call a script with ~ or @, you can pass in arguments. If you use "gosub()" or "jump()" you can't.
+
+---
+
+This one's from the Smithing interface.
+
+---
+
+If you jump() or @ to a label, the script stops at the end of the label, or if return() is called.
+
+---
+
+I see. But how would e.g. flax picking work? Referring to the 8-sec respawning, is the script left in the player's context?
+
+---
+
+The player's script deletes the scenery, specifying a period. A separate thread in the game engine remembers when to restore it.

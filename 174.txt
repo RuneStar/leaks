@@ -1,0 +1,6 @@
+https://twitter.com/JagexAsh/status/1083311826568441856
+10 Jan 2019
+
+---
+
+Within runescript, data types include INT, COORD, NPC (that's its type), NPC_UID, PLAYER_UID, BOOLEAN, STRING and things like that. Though apart from STRING, they all map to integer IDs inside the engine.

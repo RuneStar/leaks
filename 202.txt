@@ -1,0 +1,213 @@
+http://services.runescape.com/m=forum/forums.ws?254,255,171,63698141
+13-Apr-2012
+
+---
+
+Game Engine & CM Answers!
+
+---
+
+13-Apr-2012 17:26:33
+Unhide Profile Edit Highlight Bump Bad Good
+To Engine Team:
+
+A LOT of the actions done in Runescape have to be verified by the server before they can happen. there are only a few things that I can think of off of the top my head that are done client sided (such as changing the quanitity in a GE purchase).
+For some things it just seems silly for, such as following through large blocks of chat which can take a VERY long time if you have a large ping. There are also some annoyances with using the banking system that would be greatly sped up if the verifying was done passively (i.e would happen instantly on our end, but if the servers detecting something illegal it would change it back).
+
+**Would it be possible to tone this down?
+**How hard is it to have a game tick running constantly?
+**Is the game tick affected when the server lags because of heavy load?
+
+- The game was originally 100% server side on launch in 2004. Since then we've added a client side scripting system and improvements to the interface system which allows the content team to move responses to the client where it's safe to do so. Newer content is generally better at this, but we still keep a lot of restrictions in place (as you see). The reason for this is simply that it allows us to keep the security at the engine level without having to worry the content team about client/server security - they can get on with making great content!
+
+There's a fairly noticable delay between clicking something and it actually happening (kinda brings it back to my first question).
+
+**How much extra load would be added to the servers if the duration of a tick was halfed or thirded, would we ever see decrease in time between ticks?
+
+- Well, twice, three times etc! Actually, our engine was tweaked to run at 10x its current rate for Stellar Dawn, and that worked OK - the main problem is that we'd break a LOT of content doing it.
+
+**What's the current biggest character filesize? How much memory does an active character use?
+
+- Save games are a few kilobytes generally, memory on the server will again be a few 10s of kilobytes and 100s of K on the client for the models, sounds etc
+
+**How insightful has the hiring of Mod Jacmob been? In an interview (no source) I read he was pretty confident all bots could be stopped, is this still the case? 
+
+- He's great to work with and has been very busy working on the anti botting.
+
+---
+
+Why is there a bank space limit? Is it due to server space? 
+
+Yes, simple as that. Every (Stack of) item you have uses 6 bytes of server space, so do the maths!
+
+---
+
+are there new features in Java7 that you are looking forward to, do you know when the Java7 will finish beta and mature, will the Java7 be as available as java6 to all the existing players and do you have plan to make something exclusive for Java7
+Is the development of the game hindered by some delay in Java development(past and now and future)? Do you have any roadmap or plans to keep pace with the latest technology
+
+- Java 7 doesn't really provide us with anything extra we can use in RuneScape. In reality, we are locked to the minimum version we support (6, update 10), anything new we want we write ourselves on top of this base.
+
+What is your view towards DirectX 11?
+some games used the DirectX 11 code path to increase the fps while keeping the same gfx detail, more and more devices are going to support DirectX 11, like next gen iGPU of Intel and SoCs of tablets, is there any such plan for future like 2013, 2014?
+
+- Again, we have to support DX9 as our base. Whilst we could have a DX11 gfx mode, so few people could use it at the moment that it wouldn't be worth the time, sorry.
+
+In the last Q&A, you said there was a new engine in development that render objects progressively with increasing detail from far to near, that there will be no "loading, please wait", how are they now?
+
+- Still working on it, sorry!
+
+i've heard that Transformers Universe and stellar dawn will use a“new Runescape engine", so will that be used in Runescape in the future, are you working together? and will it or at least some be used on RS in the future, how big the differences will be? ( can you ans by avoiding telling what they are like)
+
+- It is unlikely RS will be ported to the TU engine as they've grown very far apart. That doesn't mean that RS won't get engine upgrades, just that they will likely come from a different source.
+
+Java is dying?? Will the future mainstream consumer products no longer support Java, like the Android and iOS now, I’ve heard that future browser will no longer support plugin, and do you plan to make Runescape available to tablets?
+
+- Yes, it is. We have plans, watch this space!
+
+What will next gen engine be if there is one
+Will you increase the system requirement in the future. And what you think the future requirement will like
+
+- We never plan to increase system reqs unless completely necessary. We don't have any plans for this at the moment, certainly.
+
+What restrictions you are facing now due to Java 
+
+- Not really Java, but its deployment to PCs grows less all the time and persuading people to install it gets harder and harder :(
+
+---
+
+you said performance cant scale up with MC support, so what is the cause, what you will do ?
+
+- It's down the architecture of the RT5 engine - it wasn't designed for multi core, and retro fitting it broke many things. Whilst I have it working in my test builds, it's both unstable and not appreciably faster because of this. A new architecture of course won't have this problem!
+
+There are some games for tablets having better graphics and higher fps than Runescape, like the Infinity Blade(if I have remembered corectly), has crytek engine and its graphics is really good, and is very smooth as well What do you think?
+
+- Yes! We want to emulate and surpass what is possible in the browser - we have major updates planned to bring us back in line with other titles. Watch this space.
+
+The game engine even before bot nuke is not efficient, what do you plan to do to improve it
+
+- Optimus will address many of these issues. Other than that, a brand new graphics architecture is required.
+
+I heard pc with AMD gpu are more prone to fps issue even before the bot nuke, what do you think?
+
+- It's certainly possible. We generally develop on nVidia GPUs (historically ATI cards have had serious reliability problems with drivers), but we are allocating ATI cards out to some developers now to catch these problems.
+
+The system requirement and GPU comparison is out of date, any plan to update it?? What spec do you think an average fps of 30+ with all high except no AA in openGL or direct will need if the engine is efficient?
+
+- I don't know for sure, but as I mentioned earlier my 4-5 year old PC runs RS at a solid 30-40 fps at the moment.
+
+People tend to get very low fps in crowded area no matter how good their pc is, what is the cause and how will you improve it? 
+
+- Turn off 'idle anims: all', other than that it's because of our animation architecture. We know it sucks and plan to improve it!
+
+---
+
+Does the Runescape currently take full advantage of computers with multi core processors? And if not, are there any restrictions preventing you doing so?
+And do you have any plans to use OpenCL (or similar software such as CUDA) in the future? 
+
+- No, yes, and see previous answer about the RT5 architecture. Not enough people have decent OpenCL support to make it worthwhile yet, sorry!
+
+---
+
+My questions for the team:
+
+1: What are your plans for the next RuneTek Engine? It's been three years since RuneTek 5 was released (AKA: SD/HD Combo update) and two years ago you released a early preview of it in one of your trailers, so we must be due for it soon.
+
+- RT 6 is the TU engine. RT 7 (for RS) is being designed at the moment.
+
+2: What are the estimated performance boosts expected for Optimus? How many frames will we be able to claw back? 
+
+- I don't have exact figures, but hopefully back to around where we were pre-nuke.
+
+---
+
+4. Adbots are on the rise, and I have personally been reporting every single one that I find, pm's me or otherwise shows their spamming nuisance. What is being done to combat these RWT adbots? 
+
+Before we launched ChatWatch, there was an average of 250,000 adverts in game each day. Now that figure is under 10,000.
+
+This is still being worked on currently to constantly improve this system. So in order to help us, please continue to report any of these you see in game, it really does help.
+
+Thanks :)
+
+---
+
+1) Recent FPS issues have lead some to question whether Java is showing its limits in the game. Do you believe that's true? Have you ever felt like Java really limited the expansion of the game or engine?
+
+- Java doesn't really limit us speed wise, just deployment wise, as I think I mentioned earlier.
+
+2) What's the hardest project you've had to work on to date?
+
+- Introducing full UV texturing into the java renderer - ARGH
+
+3) Out of all of you in that room, who would win in a fight? ;)
+
+- Mike, probably. Although if the fight involved MahJong tiles, probably Phil.
+
+---
+
+Hi game engine team :)
+
+1) Would Jagex ever consider releasing the tools used to create the game for game developers (like myself) to see how they work?
+
+- Maybe, but I think they'd probably scare you off to see the madness we make the content teams deal with!
+
+2) Which other programming languages would you say runescript was similar to? Could we have a code snippet? ;)
+
+- Hmm, syntax wise it's similar to any C-style language, except variable names are prefixed with their type (eg. %varname is an integer). We also lack full array support. Other than that, it'd do pretty much anything you could do in C or Java.
+
+3) What is the biggest piece of advice you would give to people who want to get into the games industry? 
+
+- As mentioned earlier, maths, maths and maths.
+
+---
+
+To Chris_E and Michael:
+Bank space is something you seem reluctant to increase. I hear the reason is because of the increasing size of the game save file for each player. If each bank space is represented by two 32 bit numbers (item ID and stack number) and there are probably less than 40k item IDs in use, why not reduce the space allocation for the item ID variable and increase the amount of bank space we can have. 
+-
+Actually we use a 16bit and 32it number, but close enough - recently we went over 16bits for location and models IDs :(
+
+---
+
+@ Engine Team - Any possibility players may ever be able to see what they're account ID number is in the system?
+
+I think some players would be curious to know what number out of the vast majority their account is. :P Again not really a pressing question.
+
+- For historic reasons we don't have incrementing account IDs. For players with username logins, these names are hashed into the account ID, for email login players we auto generate a random one.
+
+---
+
+Hi iluminator5:
+
+"1) Will Skyboxes be implemented into the main game world anytime soon?"
+
+That's up to our content team - the engine will do them, they just need to design some. :)
+
+2) Is Runetek 6 coming anytime soon? 
+
+That's our new engine for Transformers. And the answer is: when it's ready. ;)
+
+---
+
+Purus Feles:
+
+"To whoever can explain this.
+
+Many people "flame" fellow players who complain about the fps problems.
+
+The most common is that those who complain are told that they have crappy computers and should buy new stuff etc.
+
+But...unless I misread (in tech support)...I read something about the game-engine being part of the problem and that there appears to be a (fps) problem with RS running on (some) computer(s) with more then 1 processor.
+
+Can this whole fps problem be explained in complete honesty and in such a way that its clear for the "dumbies" as well?
+
+(perhaps by creating a "fps problem explanation guide for dumbies" thread...as we are not all "computer specialists";)"
+
+===
+
+There are several things that add up to cause the frame rate issues. The underlying issue is historical. When RuneScape was first written (before HD), it was a purely software based graphics engine. That means that all of the work was done on your CPU, rather than on your graphics card. This is good in some ways and bad in others. It meant that RuneScape would run (slowly) on any computer, regardless of what graphics hardware you have. It did however mean that the graphics were a bit rubbish.
+
+When HD was introduced, we moved to having 4 ways to render the graphics:
+- Pure Java (now called Safe Mode). This is the slowest way to see the game (I can't really emphasise this enough, as people seem to think it is faster), but it will always work, if the other methods don't work for you. You should never need to choose this, which is why there is no button for it in the graphics options
+
+- Software mode. This also does not use the graphics card, but it works by running some native code (i.e. not Java) written a mixture of C++, assembly and intrinsics in order to provide an experience that is faster that safe mode, but also does not need any particular graphics drivers to be installed. This is generally the best way to play on netbooks, and other low-end devices
+
+- OpenGL and DirectX. These two are the hardware modes, and are generally the best way to play RuneScape. However, the problem that exists with this is that the software mode was written first. When writing graphics code to run on graphics cards, you have to write it in a very different way to how you would write it to have a software rasteriser. As our hardware modes are grafted into the existing engine, they are not quite so efficient as they might be. When we obfuscate this code, any slowdown this causes is magnified, which has caused the slowdown since the bot update. The underlying issue is difficult for us to solve, but it is certainly something we keep on coming up with ideas to deal with, and we have plans that should mitigate this to some degree. The anti-botting issue I think I have covered fairly thoroughly elsewhere.

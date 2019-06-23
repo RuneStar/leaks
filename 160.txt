@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/885597869859897344
+https://twitter.com/JagexAsh/status/885780393152192512
+14 Jul 2017
+
+---
+
+Hey Ash, does RuneScript have proper scope support: declaring var inside scope and can't use outside?
+
+---
+
+We can define local variables for just one piece of script, yes.

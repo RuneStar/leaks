@@ -1,0 +1,6 @@
+https://twitter.com/JagexPi/status/834454382603333632
+22 Feb 2017
+
+---
+
+It only has a single =,&,| etc. You also cannot do if(true), you have to do stuff like $i=1; if($i=1) {}

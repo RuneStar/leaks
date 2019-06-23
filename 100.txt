@@ -1,0 +1,33 @@
+https://www.reddit.com/r/2007scape/comments/79pzu8/grotesque_guardians_feedback_tweaks/dp3w45d/
+https://secure.runescape.com/m=news/a=62/grotesque-guardians-feedback-tweaks?oldschool=1
+Oct 30 2017
+
+---
+
+All perfect changes, it sounds like pro meele not working was a bug which is pretty weird
+
+---
+
+So, this is the code that's live now: https://i.imgur.com/DBnJiEc.png
+Previously line 32 had:
+
+~playerhit_n_melee(false,randominc(%combat_stat),$delay);
+
+So we were doing all of the hardwork above, calculating the correct value, and then passing in a whole new random number as the damage regardless... Oopsy. :(
+
+---
+
+21: [label,gargboss_dusk_slash](seq $attack_anim, int $delay)
+22: npc_anim($attack_anim,0);
+23: anim(%com_defendanim,calc($delay * 30));
+24: sound_synth(npc_param(attack_sound),1,0);
+25: ~npc_meleeattack;
+26: def_int $damage = 0;
+27: if (randominc(%combat_stat) > randominc(%com_slashdef))
+28: {
+29: 	~npc_meleedamage;
+30: 	$damage = randominc(%combat_stat);
+31: 	if (%prayer_protectfrommelee = ^true) $damage = scale(20,100,$damage);
+32: 	~playerhit_n_melee(false,$damage,$delay);
+33: }
+34: else ~playerhit_n_melee(false,0,$delay);

@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/1050683566710018048
+https://twitter.com/JagexAsh/status/1050731846642913280
+12 Oct 2018
+
+---
+
+Hey Ash, I think someone left this by accident in one of the interfaces "[if_button1,cws_doomsayer:King Black Dragon] @cws_toggle_reset(22);"
+
+---
+
+lol! Sure sounds like it. Right-click the 'Report' button to find a bug report form where you can tell the testers what interface you found it on.

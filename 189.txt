@@ -1,0 +1,12 @@
+https://twitter.com/Jagex_Ghost/status/587678587597234177
+https://pbs.twimg.com/media/CCfaj16W4AAJd5W.jpg
+13 Apr 2015
+
+---
+
+Shayzian sigil test for the city of Korend (not spelled correctly but @JagexReach isn't here :P) on Zeah! :D
+
+---
+
+Unholy book page set does not have follower_npc defined! user:john_c11
+in script:general_follower/follower_prevent.rs2 [proc,follower_permitted]

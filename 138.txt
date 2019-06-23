@@ -1,0 +1,28 @@
+https://twitter.com/Chrischis2/status/729039903850409984
+https://twitter.com/JagexAsh/status/729584870268219392
+https://pbs.twimg.com/media/CiABksCWMAAr-SD.jpg
+7 May 2016
+
+---
+
+Hey Ash, are you willing to share the enum format for RuneScript?
+
+---
+
+Looks like this:
+
+---
+
+What is the difference between "namedobj" and "obj"?
+
+---
+
+The language uses different types for "item that was specified in the code" and "item from player input".
+
+---
+
+So is it possible to pass a namedobj to anything that is wanting an obj?
+
+---
+
+Yes, but not vice-versa. The distinction exists to reduce the risk of arbitrary duping bugs.

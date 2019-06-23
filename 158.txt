@@ -1,0 +1,23 @@
+https://twitter.com/JagexKieren/status/771695256261853184
+https://pbs.twimg.com/media/CrWcm1pWEAAjxES.jpg
+2 Sep 2016
+
+---
+
+Here's an example of a drop table... Who can tell me what creature this is for?
+
+---
+
+Are obj names case sensitive? Because some items like Red_Dragon_Vambraces all have capitals in it.
+
+---
+
+Nope, not case sensitive.
+
+---
+
+What about commands like random or mes, are they not case sensitive too?
+
+---
+
+No commands are case-sensitive. Script declarations such as [label,swan_battle_restart] are also case-insensitive.

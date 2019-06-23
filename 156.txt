@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/719922571353976832
+https://twitter.com/JagexAsh/status/719927985915228160
+12 Apr 2016
+
+---
+
+Can u define new constants(^) or are they in engine?
+
+---
+
+Yes, in files of type .constant or .macro (for legacy support).

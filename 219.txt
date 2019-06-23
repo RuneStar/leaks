@@ -1,0 +1,12 @@
+https://twitter.com/Catanai/status/482268881529368576
+https://twitter.com/JagexAsh/status/482442504336601088
+https://twitter.com/JagexAsh/status/482447008452845568
+27 Jun 2014
+
+---
+
+@Catanai If the data is INT, we use the compile-time constants ^true and ^false, which are defined as 1 and 0. If it's BOOL, "true" works.
+
+---
+
+@Catanai Up to about 2006, we had "or" but not "and". By 2007 we could do "and", so newer code would not need to be nested.

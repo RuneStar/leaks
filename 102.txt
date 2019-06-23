@@ -1,0 +1,17 @@
+https://twitter.com/JagexOrion/status/1088575157977993216
+https://pbs.twimg.com/media/DxtkxAbWsAAcekX.jpg
+https://twitter.com/JagexCamel/status/1088577854961577984
+https://pbs.twimg.com/media/DxtnyI0XcAE1JhB.jpg
+24 Jan 2019
+
+---
+
+Surprising not the most stupid line of code I've written
+
+---
+
+if($doot=^true) .npc_queue*(npc_say,2)("*Doot doot*");
+
+---
+
+npc_queue*(npc_say,random(2))("The trumpets of war beckon you!");

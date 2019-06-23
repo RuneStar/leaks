@@ -1,0 +1,6 @@
+https://twitter.com/JagexAsh/status/891995293138513920
+31 Jul 2017
+
+---
+
+.mesanim is for chathead expressions such as 'happy', 'evillaugh', etc. .mes (renamed to .enum) is for look-up tables. .param = parameters.

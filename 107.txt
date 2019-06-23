@@ -1,0 +1,22 @@
+https://twitter.com/XenonOSRS/status/1122534695537905664
+https://twitter.com/JagexAsh/status/1122817917463166976
+https://pbs.twimg.com/media/D5UM7MRWwAErmXM.png
+29 Apr 2019
+
+---
+
+my cat just hissed what did i do to him
+
+---
+
+There are various possibilities. Here's a code snippet that might be relevant:
+
+---
+
+// Talk-to.
+[onnpc3,_follower_overgrowncat]
+if (~catspeak_check = true) jump(followercat_talk);
+// Apparently someone decided fat-shaming is okay in a fantasy world;
+~chatplayer("<p,neutral>Hey fatty! Are you hungry?");
+~follower_catchat("<p,angry>Hiss!");
+~chatplayer("<p,neutral>Easy, easy.");

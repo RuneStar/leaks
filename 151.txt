@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/633510189208072192
+https://twitter.com/JagexAsh/status/633694211762692097
+18 Aug 2015
+
+---
+
+I was wondering, is it the person who makes the script or the compiler is adding unreachable return code at the end of every cs2?
+
+---
+
+I believe the compiler automatically appends "return" to all scripts, in case the developer didn't write it.

@@ -1,0 +1,11 @@
+https://twitter.com/TheCrazy0neTv/status/1134717297015382016
+https://twitter.com/JagexAsh/status/1135074762894577664
+1 Jun 2019
+
+---
+
+What is the new config type you guys got back in February?
+
+---
+
+I think that'd be the 'game log event', a config that lets us output data more conveniently to the analytics staff.

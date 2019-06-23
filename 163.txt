@@ -1,0 +1,7 @@
+https://twitter.com/JagexAsh/status/507892229776896000
+https://pbs.twimg.com/media/BwxlSNSCUAEzkMX.png:large
+5 Sep 2014
+
+---
+
+Random event removal progress: 350+ skill-specific calls removed so far. Next up, handle discontinued items.

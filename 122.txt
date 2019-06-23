@@ -1,0 +1,36 @@
+https://twitter.com/Chrischis2/status/487536876614864896
+https://twitter.com/JagexAsh/status/486438584350556161
+https://pbs.twimg.com/media/BsAtUGPCIAAJofV.png:large
+8 Jul 2014
+
+---
+
+Nothing particularly exciting to see here :-)
+
+---
+
+what is 'RuneDay'?
+
+---
+
+Jagex's internal calendar. Runeday 1 was the launch of the members' version, back in Feb '02. We passed 4500 recently.
+
+---
+
+In your .rs2 IDE, where exactly are things like 'raw_chicken' etc. defined?
+
+---
+
+In .obj files.
+
+---
+
+How exactly does gosub work?
+
+---
+
+gosub(scriptname) - executes the script called "scriptname", then resumes the current script from where we were.
+
+---
+
+Engine commands such as inv_del() are green. Script calls such as ~chatnpc() can be set to blue, brown or neither.

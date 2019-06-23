@@ -1,0 +1,28 @@
+https://twitter.com/JagexAsh/status/1087312806435794945
+https://pbs.twimg.com/media/DxbpDqTX0AUfKzZ.jpg
+https://pbs.twimg.com/media/DxbpJvUW0AATTqz.jpg
+https://twitter.com/JagexAsh/status/1087698938818375680
+https://pbs.twimg.com/media/DxhIZqLXQAAi-Ck.jpg
+https://twitter.com/JagexAsh/status/1087699378524033024
+21 Jan 2019
+
+---
+
+First int is the quantity, second is the server ticks between restocks.
+
+---
+
+Player permanent (used for your bank and worn items), player temporary (used for clue rewards shown on screen) and shared (mostly shops). I understand only the shared ones support restocking in OSRS, though RS3 got something more for the trade restrictions of 2008.
+
+---
+
+scope=temp and scope=perm for clue rewards and for the bank respectively.
+The clue reward one would be defined without any stock listed, so it's empty, and it'd be filled via code when you complete a trail, then displayed, then emptied into your inventory.
+
+---
+
+Not sure what you mean there. When I said scope=perm was used for inventories like the bank, see here what that looks like.
+
+---
+
+stackall determines whether non-stackable items would stack in it. This determines the difference between how cabbages behave in your inventory compared to how they behave in your bank.

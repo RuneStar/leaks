@@ -1,0 +1,16 @@
+https://twitter.com/paxmagenz/status/836688482286325760
+https://twitter.com/JagexAsh/status/836875243260096512
+https://pbs.twimg.com/media/C50tmB3WMAA3Dad.jpg
+1 Mar 2017
+
+---
+
+I'm not keen on sharing much in case it reveals exploits we don't know about.
+
+---
+
+For confirmation, this is the full drop Gz label of a lesser demon?
+
+---
+
+It's the death code for a lesser demon, yes. The "~npc_death" bit calls the standard script for its anim and for deleting it, etc.

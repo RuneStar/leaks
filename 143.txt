@@ -1,0 +1,16 @@
+https://twitter.com/TheCrazy0neTv/status/1106110075662405632
+https://twitter.com/JagexAsh/status/1106134695903932416
+https://pbs.twimg.com/media/D1nHozFX4AUOJdN.png
+14 Mar 2019
+
+---
+
+How do you guys define multiple cases and default case in a switch statement?
+
+---
+
+Thanks for the reply. I noticed the "switch_obj," does cs2 also use switch_{type}?
+
+---
+
+It does.

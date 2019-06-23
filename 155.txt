@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/718061761828626433
+https://twitter.com/JagexAsh/status/718074693866168320
+7 Apr 2016
+
+---
+
+Do u define what proc returns after the arguments e.g [proc,myproc](string $var)(int)?
+
+---
+
+Yup. That proc would take a string and return an INT. A proc can take up to 50 arguments and return 50 returnvalues.

@@ -1,0 +1,13 @@
+https://twitter.com/JagexAsh/status/962778054329282560
+https://pbs.twimg.com/media/DVx3jQtX4AE__C_.jpg?format=jpg&name=orig
+11 Feb 2018
+
+---
+
+It looks awful, but it's progress - I've started some rudimentary code for generating Theatre of Blood dungeons and entering them. The GFX are placeholders; we don't currently plan for the arena host to be My Arm painted pink. Due in @OldSchoolRS in a few months.
+
+---
+
+Spawned with %tob_wavenumber = 1
+in script:minigames/game_tob/_core/instancing.rs2
+[ai_conqueue,tob_wave_controller]

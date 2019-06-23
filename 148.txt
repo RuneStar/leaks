@@ -1,0 +1,31 @@
+https://twitter.com/JagexAsh/status/443423938467467264
+https://pbs.twimg.com/media/BidbuQGCEAAQzMS.png
+11 Mar 2014
+
+---
+
+After a playthrough session from the visiting players, Scorpia's arena no longer has safe corners.
+
+---
+
+What are those pink squares and pink grid? But in the room grid is black.
+
+---
+
+In our map editor, the pink represents blank flooring for outside the accessible bit of the cave.
+
+---
+
+Map editor automatically mark those spots pink or you have to do by hand?
+
+---
+
+We have to blank them out manually. The colour that represents this is pink.
+
+---
+
+Very interesting... How do you not get confused to all symbols?
+
+---
+
+When we hover over something, a panel shows what it is.

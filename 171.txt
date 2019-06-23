@@ -1,0 +1,7 @@
+https://twitter.com/JagexAsh/status/907755354880184321
+https://pbs.twimg.com/media/DJj-qkqWsAAHLbs.jpg
+12 Sep 2017
+
+---
+
+This is from the code that runs on login to update Allotment 6 (I think that's near Ardougne) based on time since last cycle:

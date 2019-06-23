@@ -1,0 +1,11 @@
+https://twitter.com/TheCrazy0neTv/status/1100861669956349954
+https://twitter.com/JagexAsh/status/1100924657845325824
+27 Feb 2019
+
+---
+
+Hey again, what is the main differences between normal and strong queues?
+
+---
+
+A standard one will wait if you have a menu open, and execute when it closes. A strong one will close menus to execute itself sooner.

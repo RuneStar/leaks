@@ -1,0 +1,13 @@
+https://twitter.com/JagexAsh/status/814540902542802944
+https://pbs.twimg.com/media/C03UXntXAAQd6PP.jpg?format=jpg&name=orig
+29 Dec 2016
+
+---
+
+The drain effect of the new Raids prayers is still subject to change. Now, @OldSchoolRS, let us pray:
+
+---
+
+%prayer_drain_effect
+%prayer_drain_counter
+%prayer_drain_resistance

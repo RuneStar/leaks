@@ -1,0 +1,6 @@
+https://oldschool.runescape.wiki/w/Update:Patch_Notes_(10_October_2013)
+10 October 2013
+
+---
+
+Waydar and Lumdo, in the Monkey Madness quest, have been updated to stop them showing their names as "mm_waydar" and "mm_lumdo" in dialogue boxes.

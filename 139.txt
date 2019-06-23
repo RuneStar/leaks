@@ -1,0 +1,11 @@
+https://twitter.com/TheCrazy0neTv/status/917961521636040705
+https://twitter.com/JagexAsh/status/918051995617054721
+11 Oct 2017
+
+---
+
+Just curious, what does "if" and "cc" stand for in CS2 commands?
+
+---
+
+cc_ applies the action to a dynamically created component; if_ applies it to a static component created in the editor tool.

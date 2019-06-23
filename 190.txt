@@ -1,0 +1,22 @@
+https://secure.runescape.com/m=news/a=62/spellbook-rework-wise-old-man-and-increased-zoom?oldschool=1
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-11/wom_1.png
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-11/wom_2.png
+11 October 2018
+
+---
+
+This change has been highly requested and was met with a resounding Yes in the poll. The Wise Old man's ability to spot redundant non-member quest items in your bank has been rewritten. The feature now includes member's quests and uses a handy interface for discarding items directly so you can keep the ones you want! The Remove All button prompts you with a confirmation screen before removing all of the items shown in the interface.
+
+This update required a large amount of data gathering work to be done to ensure that the Wise Old Man could remove all the quest items properly. Firstly, the current code infrastructure had to be rewritten, this was because although the Wise Old Man was checking your bank for the Free to Play quest items previously, he would only tell you that you had them and not remove them.
+
+This system of checking the items would also not be suitable for Members’ quest items, as there are so many more of them to check compared to the Free to Play quest items. The first step in checking which Members’ quest items that the player has was to create a list of every single item that is used in Members’ quests. 
+
+To do this I manually went through the items that we have from each quest and put them into their own data structure for each quest. This was a tedious task as there were initially about two and a half thousand quest items that needed to be sorted through! I managed to cut this down to the items which could potentially be an issue and then store this information into a data structure for easy reference.
+
+This is what we call an enum, they are a way in which we pass through a certain value and then output another value corresponding to it. This easily allowed me to keep a list of items for each quest, and then I can only display those items if you have them and have finished the quest.
+
+Once this information was sorted and stored into the data structures I then had to check which quests the player had completed so that they could only remove the items once the quest is finished. This was straightforward as we already have a similar system in place for checking quest completion in the quest journal. 
+
+Finally, with the data able to be easily referenced it was a case of using an interface to display which items the player could remove and ensuring that these items could be removed from their bank, inventory, and worn. Everyone should now have an easier time removing those pesky leftover quest items in the future.
+
+~ Mod Munro

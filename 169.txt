@@ -1,0 +1,8 @@
+https://twitter.com/JagexAsh/status/913105292220682241
+https://pbs.twimg.com/media/DKv_rFoXoAMZ_0a.jpg
+27 Sep 2017
+
+---
+
+For in-house languages, internal documentation's essential - except for this bit from 2011:
+(P.S. I think it returned a string, not an int.)

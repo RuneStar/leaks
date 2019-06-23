@@ -1,0 +1,16 @@
+https://twitter.com/iiimcody/status/947337544345313283
+https://twitter.com/JagexKieren/status/948276161913741313
+https://pbs.twimg.com/media/DSj0IeKXUAAWbO4.jpg
+2 Jan 2018
+
+---
+
+@JagexAsh if you were to somehow deplete olms head to 0 health while his claws were up. would it kill him or would he regenerate back. Jw cause a 100man dbow squad would be epic to see if they could 1 hit olms head 1st phase.
+
+---
+
+I don't actually know, and am not at work to check through the code at the moment. Kieren might remember that code, if he's available.
+
+---
+
+It will not die. There is some code there to prevent it and heal it back to full.

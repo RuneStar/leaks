@@ -1,0 +1,11 @@
+https://twitter.com/Chrischis2/status/644620927519617024
+https://twitter.com/JagexAsh/status/644625085421236225
+17 Sep 2015
+
+---
+
+Judging from the photo ai_queue3 is death, is there any more ai_queue's?
+
+---
+
+1 = retaliation, 2 = damage, 8 = bind effects. Other values up to 20 are available for custom situations.
