@@ -1,0 +1,103 @@
+https://secure.runescape.com/m=news/a=62/dev-blog-you-are-here?oldschool=1
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/InitialMapEd.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/NoBlending.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/CastleWalls.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Mapfunctions.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Zoomedout.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Zoomedout2.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Overview.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Overview2.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Client.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/client2.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/flashingpubs.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/mouseover.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/pollbooths.png
+28 April 2017
+
+---
+
+The Starting Point
+
+As an engine developer, my role is to provide the tools for the content team to build these features rather than doing these things directly, so as well as getting the map rendering in game I needed to build engine and scripting features to allow the content mods to build the map experience you want.
+
+There already was a bit of code behind the scenes to deal with world maps. The map editing tool we use to build the world of OSRS had some worldmap functionality - it allowed you to scroll around the world and click an area to load the relevant map file, which is a bit easier than having to remember which file contains which bit of the world. It could also export the surface world to a big .png file, which is what we use to keep the world map on the website up to date.
+
+Unfortunately, nothing else understood this world map, and the data format wasn't really suitable for in-game use. So stage one was to rewrite the tool that built the worldmap data from the individual map files. Then I had to get the Map Editor to understand the new format. I didn't quite get it right first time, as you can see...
+
+---
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/InitialMapEd.png
+
+This is Lumbridge Castle, honest. Clearly lots of things are the wrong colour, and the observant among you will have noticed that it's upside down. Still, apparently my packtool does something. After this progress was fairly rapid.
+
+---
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/NoBlending.png
+
+Things are roughly the right colour now (DON'T MENTION THE BRIDGE), although there's no ground blending.
+
+---
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/CastleWalls.png
+
+Lumbridge Castle in defensible structure shocker.
+
+You'll notice that we're not just drawing the ground any more, but walls have made an appearance as well. This is good, but that bridge is still pink, and there aren't any pubs :(.
+
+---
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Mapfunctions.png
+
+Now we're talking. We've got map scene icons (things like the trees and bushes), and what are internally called mapfunctions, which are the circular icons that will be familiar from the minimap.
+
+Lumbridge Castle is disturbingly pub-free, but we should be able to see an icon for any pubs we come across. If only we could look at something beyond this 64x64 tile area...
+
+---
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Zoomedout2.png
+
+There it is! The Blue Moon Inn! Plus pubs in Falador, Port Sarim, Burthorpe, and the Barbarian Village. European monks used to take their brewing pretty seriously, but the ones on Entrana don't seem to be interested.
+
+---
+
+There are still a few problems, though - the quest start icon below Draynor Manor is partly missing, the wilderness ditch seems to have caught Pink Bridge Disease, and so on.
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Overview2.png
+
+None of these were insurmountable problems, though, and pretty soon I had the Map Editor back to where it had been, complete with map labels (writing "Lumbridge" somewhere near Lumbridge, etc) and an overview.
+
+So, we'll just stick it in the client and see how we get on shall we?
+
+Putting the map into the client
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/Client.png
+
+#SHIPIT
+
+Yes, well. "Requires engine work."
+
+Actually, mostly it just needed some simple content work that I had no idea how to do, and with help from Mod Maz I soon had an interface in the game with the map on it, scrolling nicely.
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/client2.png
+
+At this point, the map looks dangerously close to being done, but as ever with these things, the battle was only half over. The map was scrollable and zoomable, but you couldn't interact with it in any way.
+
+The dream of being able to have a key for the icons where you could click on the pubs and make them flash to make finding them easier was still some way off.
+
+This was where the work to make the map accessible from OldSchool's scripting system needed to happen. It took quite a while to add this, but eventually, one glorious day...
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/flashingpubs.png
+
+THE PUBS ARE FLASHING! If you can't find them at this point, you've probably had enough beer already.
+
+Of course, after a few beers you inevitably fancy a kebab, so by grouping icons into categories, I made it possible to make the pub icons and kebab seller icons flash at the same time with a simple script command:
+
+worldmap_flashelementcategory(saturday_night);
+
+I added a few other features, like being able to make the pub icons disappear YOUSAIDYOU'DNEVERTALKABOUTTHATDAY and being able to tell when your mouse cursor moves over or away from a pub icon:
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/mouseover.png
+
+Since then, as the content devs have been implementing a proper worldmap interface, I've been busy fixing bugs in the new system, but hopefully they now have almost all of what they need to build the map you vote for, so get yourselves to a poll booth. I've highlighted them below:
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-04-28/world-map/pollbooths.png

@@ -1,0 +1,44 @@
+https://secure.runescape.com/m=news/a=62/progress-report-the-inferno?oldschool=1
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/jira-jobs.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/jira-icons.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/spawns-runescript.png
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/tzkieren-zuk.png
+03 May 2017
+
+---
+
+So how do we approach something of this size? Where do we start? Well the first thing we need to do is to break it down into bitesize chunks. For this, we use a software package called JIRA.
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/jira-jobs.png
+
+I cannot just go and "develop The Inferno" - what components are required for it?
+
+These tasks then need to have dependencies set out, for example we cannot tie in the time-tracking feature until we have the actual wave system and minigame up and running - at least in some capacity.
+
+Selection of JIRA jobs
+
+We prioritise features based on how vital they are to the update, and how many dependencies they have. For example, the wave structure is vital for so much of the content that we really need that in place ASAP before moving on to creating the final boss even.
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/jira-icons.png
+
+A lot of extraneous features we associate with being "nice to have" if we get enough time. On a typical project, we make a rather large list of features in this category, and cut them back throughout development to the ones we feel are best and have time to develop.
+
+An interesting aspect to this is we poll many of these things, such as Lava eel fishing in Mor Ul Rek. This means it is vital to the update - since we've promised it is going to happen!
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/lava-eels.png
+
+Once that's all sorted, I could start laying some code down and get the main systems in place. Most of this was straight forward, as obviously TzHaar Fight Caves has a pretty similar minigame going on - but one thing I managed to tie into the core system, was purely randomised spawns.
+
+A player shouldn't be able to determine where monsters are going to be spawned, but at the same time, these locations are saved per run! This means they cannot logout and in to get more desired spawn locations for the monsters.
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/spawns-runescript.png
+
+This is Runescript: our in-house scripting language. The code shown here is what runs when you first enter the Inferno.
+
+---
+
+Now acquiring assets from graphics, we were able to start visualising how this would all look, and this is where the back and forth happened a fair bit. Animations and timings are notoriously tricky to get right in RuneScript!
+
+I'd fix one thing, and discover we needed to tweak an animation and this happened several times before we were all incredibly pleased with the final product! 
+
+http://cdn.runescape.com/assets/img/external/oldschool/2017/newsposts/2017-05-03/tzkieren-zuk.png
