@@ -1,0 +1,28 @@
+https://twitter.com/Faux_Freedom/status/1143148128616538113
+https://twitter.com/JagexAsh/status/1143282534878519296
+https://pbs.twimg.com/media/D93BZUbXkAAlf6D.png
+24 Jun 2019
+
+---
+
+Hey @JagexAsh. Since this is the last DMM Tournament, would you be willing to release the PvP weapon drop rates?
+
+---
+
+If I'm correct, this formula means killing a level 100 monster is MUCH more common than both a level 2 or level 200. Is the drop rate parabolic from levels 0-200? (edit: typo in the last)
+
+---
+
+To clarify this - it would make sense that the actual formula is instead 2/(1000+(x-200)^2) since it shouldn't get less likely as you kill things > 100 combat
+
+---
+
+I don't think I'm misreading this.
+
+---
+
+Looks like your right. Was just wondering since that's not how it was pitched (not your fault). Thanks for digging into it!
+
+---
+
+We could assume it was meant to be "- 200" like you suggested, since the two sections of the chance curve would then meet at level 200.
