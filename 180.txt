@@ -13,7 +13,11 @@ The problem was that the game never had a look-up table that could do the check.
 
 It's a legacy code thing. Back in 2004 when RuneScape 2 came out, runescript didn't have all the features it does today, especially when it comes to look-up tables and data structures (see what a decade of engine work gets you). So data tended to be written into the code directly, and that's how it continued. In this example from Varrock Teleport, the code would check for level 25 and abort if you hadn't got it. Then it'd check for the specified runes, and abort if you hadn't got those.
 
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-04/spellbook_rewrite_1.png
+
 It was the same for the spellbook interface. When the Varrock Teleport button loaded, it would run some code, passing in the GFX, the level requirement, the name and description, and the runes, so that when a player hovered over the spell they'd have a tooltip generated to show that info. The code could generate tooltips but it couldn't do anything else.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-04/spellbook_rewrite_2.png
 
 Spells with multiple forms would have all this data written into all the code versions separately. For example, Weaken had the level and rune checks written into its PvM version and also into its PvP version, and these had to match whatever was written into the spellbook interface. For spells that could be autocast, the level and rune checks were written out yet again, so the game could check whether you should be allowed to set that spell for autocasting.
 
@@ -30,6 +34,8 @@ Deciding whether to show the spell on the spellbook interface, and rearranging o
 Attempting to choose the spell for autocasting.
 Setting up the tooltip on the autocast interface.
 Any kinds of future update, such as offering the info on the skill-guide...
+
+https://cdn.runescape.com/assets/img/external/oldschool/2018/newsposts/2018-10-04/spellbook_rewrite_3.png
 
 The data entry took over a week due to all the oddities of various spells. Oddly enough, rewriting the code of the spellbook interface to read this data instead of what it had before, and to generate its layout accordingly, took only a day - albeit a day with quite a late night in the office. A further day (and late night) was spent building in a filter menu for Mobile users, and gave them an option for bringing up the tooltip on mobile devices, which they previously couldn't.
 
