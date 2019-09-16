@@ -1,0 +1,13 @@
+https://twitter.com/TheCrazy0neTv/status/1173540514764922881
+https://twitter.com/JagexAsh/status/1173548090294513665
+https://pbs.twimg.com/media/EElHxHhXUAEsVCp?format=png&name=small
+Sep 16, 2019
+
+---
+
+@JagexAsh Would you show one of the quicksort scripts? I'm curious how you guys handle that kind of thing in your language.
+
+---
+
+In this example, $list is an array of interface component IDs. On each component, text is written. The script is sorting the contents of $list so that the text will be in alphabetical order A-Z, ignoring upper/lower-case.
+It's used by the fairy ring menu.
