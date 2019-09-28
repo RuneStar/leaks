@@ -1,0 +1,16 @@
+https://twitter.com/Kyle22120/status/1172239651232518144
+https://twitter.com/JagexAsh/status/1172250683292160025
+https://pbs.twimg.com/media/EESryFxWkBILHdx?format=png&name=small
+Sep 12, 2019
+
+---
+
+Hello, just dropping by to say for some reason you can use crystal axe at 70 wc (without boosting at all) when it is supposed to be restricted to 71 wc.
+
+---
+
+That does not appear to be what its developer intended, from the code.
+
+---
+
+param=levelrequire,70
