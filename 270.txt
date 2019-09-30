@@ -1,0 +1,6 @@
+https://twitter.com/JagexAsh/status/749897322105036801
+Jul 4, 2016
+
+---
+
+No, the compiler doesn't allow us to assign multiple variables in one line if they involve arrays. We wish it did.
