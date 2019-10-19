@@ -1,0 +1,7 @@
+https://twitter.com/JagexAsh/status/1184869534756491265
+https://pbs.twimg.com/media/EHGAj2AW4AURZ5Y?format=png
+Oct 17, 2019
+
+---
+
+Tower of Life entry door, checking for the player having a hammer and saw before entering. All bits of code like this would need to be found and rewritten.
