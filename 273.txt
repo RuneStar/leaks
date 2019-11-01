@@ -1,0 +1,14 @@
+https://twitter.com/JagexOrion/status/1188815246116438016
+Oct 28, 2019
+
+---
+
+// potato is used as a dummy object so that script will return
+
+if ($item = potato) {
+  return;
+}
+
+RuneScript in a nutshell.
+
+#gamedev
