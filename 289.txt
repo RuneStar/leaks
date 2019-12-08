@@ -1,0 +1,18 @@
+https://twitter.com/JagexOrion/status/1045712015770243073
+https://twitter.com/JagexOrion/status/1045701906893541378
+https://pbs.twimg.com/media/DoMdiF1XkAAh91H?format=jpg
+Sep 28, 2018
+
+---
+
+I spent all afternoon trying to 'upgrade' our achievement system to handle checklists of 32 things.
+
+It doesn't support it (bit checks & signed integers, etc.), and I'd probably mess up the other ~3,500 achievements.
+
+I just decided to remove 1 thing from my list... 😐
+
+#gamedev
+
+---
+
+It's a misleading number, there are separate IDs for many achievement chains, but internally that's how it works.
