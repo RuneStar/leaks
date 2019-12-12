@@ -1,0 +1,16 @@
+https://twitter.com/JagexOrion/status/1039548840339296261
+Sep 11, 2018
+
+---
+
+Underground Pass code has me in tears.
+
+---
+
+[aploc1,cave_exit_upass]
+
+[label,upass_unicorn_door]
+
+[opnpcu,boulder_upass]
+
+[proc,setupassgrilltrap]
