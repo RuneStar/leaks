@@ -1,0 +1,23 @@
+https://www.reddit.com/r/2007scape/comments/esrkpa/wiki_integration/
+https://www.reddit.com/r/2007scape/comments/esrkpa/wiki_integration/ffczoor/?context=3
+23 Jan 2020
+
+---
+
+Hey love the Wiki integration, such a great step!
+
+However, if an entity is far away you will start running towards it, aswell if you can't reach it, you can't "look it up" if it is at a bit longer distance. This is possible through runelite etc.
+
+Is it intended this way?
+
+---
+
+To add to Gambit's comment, we have various 'triggers' we can use in RuneScript, for NPCs and Scenery there is two main types:
+
+Ops - Up close, such as attacking with melee, talking to.
+Aps - Attacking with range, or interactions from a distance up to 10.
+There is a third type of trigger, which we only have for Players, Clicks - this was added for us with the Deadman Spectator tool set originally, but has since been used for the 'Report' function on players etc.
+
+All in all, 3 types, 'ops', 'aps' and 'clicks', we don't have clicks on NPCs or Scenery (trees, walls, doors, etc).
+
+We'd very much like clicks for both NPCs and Scenery as it'd be useful for other things too :), it's just a matter of priority for the engine team who are focused on Clan Support, some additional things we need for the next League, etc, but can get smaller requests like this every now and then.
