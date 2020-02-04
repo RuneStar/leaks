@@ -1,7 +1,18 @@
 https://twitter.com/OldSchoolRS/status/1224658454255734785
+https://twitter.com/JagexHusky/status/1224700164016951296
+https://twitter.com/JagexHusky/status/1224775421553672192
 https://pbs.twimg.com/media/EP7cX4BXkAEF0eq?format=png
 Feb 4, 2020
 
 ---
 
 2 days...
+
+---
+
+This specific file which is a fraction of the project contains over 3,000 lines of code.
+There's a lot going on in this boss! 👀
+
+---
+
+For what it's worth we have a spreadsheet made by Kieren which we plug drops and weightings into and it'll give us the runescript to copy and paste in. We have ways to work around tedious if statements 😅
