@@ -1,0 +1,16 @@
+https://twitter.com/ThirdAgeTwitch/status/1225155955488444416
+https://twitter.com/JagexAsh/status/1225499491048005632
+https://pbs.twimg.com/media/EQHZSoUXYAUhTtB?format=png
+Feb 5, 2020
+
+---
+
+@JagexAsh Any idea why the locating crystal from Shilo Village doesn't activate on this axis?
+
+---
+
+The developer appears to have written messages for distances <200 and >200, but not =200. Nice.
+
+---
+
+Or even just NOT check the distance at all, if the check for <200 had already been failed, since it'd inevitably be >=200 at that point. But my former colleague would still have been inexperienced at the time when he wrote this; he wrote much better stuff in later years.
