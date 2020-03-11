@@ -1,0 +1,72 @@
+https://secure.runescape.com/m=news/gielinor-gazette-march-2020?oldschool=1
+11 March 2020
+
+---
+
+Soul Wars
+
+Old School RuneScape started life as a backup of the old game dating from August 2007. However, it’s no secret that RuneScape has seen many fantastic additions in the years that followed, and some of these additions have inspired for Old School content. The ‘While Guthix Sleeps’ vibes in ‘Dragon Slayer II’ are clear to see and in some cases, post-2007 content such as the Corporeal Beast has been recreated in Old School. However, to date these projects have been limited in size and scope.
+
+This thought to an interesting question: what would it take to recreate something bigger? Mods Ed, Lenny and Ry set about answering this question and to do so, they selected one of 2009's most loved updates. Say hello to Soul Wars!
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars1.png
+
+Released in February 2009, Soul Wars was a hugely popular minigame that combined PvP with PvM. Ever since the launch of Old School, we’ve seen thousands of requests for it to return. For a long time, we weren’t sure it would ever be possible but as you can see from the image above, the team have successfully created a working prototype!
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars2.png
+
+It was obviously important that Soul Wars looked the same as it did back in 2009, but to fully map the area from scratch would have been a huge undertaking. So the team looked to the current RuneScape version of Soul Wars as a starting point. Luckily for us, our tools team have recently finished back-porting RuneScape tools to work for Old School (albeit running on very different engine versions). Thanks to this we were able to copy some parts of the map from RuneScape. Not everything worked, of course, but we were able to copy across tile height and blocking. For some tiles, we were even able to copy the ground colour (which comes in two different forms known as underlay and overlay). It gave us a starting point that was much easier to build on than if we’d started with nothing.
+
+Height and blocking are important, but they alone do not make an Old School map. We also needed things called areas. They are invisibly mapped on tiles and a script attached to them. The result is that interesting things can happen when a player walks on that tile. For example, areas are often used to make music tracks play on certain parts of map. The missing underlay and overlay was replaced using Old School equivalents. However, scenery and NPCs posed a more interesting challenge.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars3.png
+
+When the Corporeal Beast was added to Old School, it took weeks for its model to be recreated. Unlike the map, the current version of the Beast in RuneScape wasn’t usable – the game has changed so much that the models are no longer compatible with Old School. Luckily for us, that isn’t the only version of the game we had available. As you’ve probably heard before, the 2007 backup used for Old School was a lucky find. The game wasn’t backed up very often back in those days but this thankfully changed over time, and we were able to use a version of RuneScape from May 2012 to help us recreate the models we needed.
+
+Both games use the .ob3 file type to save their models, (not to be confused with the .ob3 files used in Microsoft Outlook!). Over the years we've made various changes to this standard to support things like UVs for applying textures, and the models we found were saved in version 19 of this format. Old School required them to be version 4 compatible. For our compiler to process them without crashing, it meant stripping lots of additional information out. Another issue was the size difference between RuneScape and Old School models. Models that were made after the 'HD' update are four times the size we needed!
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars4.png
+
+Soul Wars is also an area that makes heavy re-use of existing assets from throughout the game world, making tracking down individual assets quite the task. We could have used alternatives that currently exist in-game, but wanted to stay as true to the original as we possibly could. With the missing models copied over, we’re now cleaning them up so they’ll be usable.
+
+We do this by importing a model into Maya, checking the scale and adjusting it if required. We then export the model back out ready to be imported into our in-house model editor, JagEd. Sadly, we can’t just scale it in JagEd due to the version incompatibility. Ideally in the future this would be all done in one step, but when prototyping you sometimes need to get creative and find hacky solutions before a proper implementation is developed! While we’re having to do each model individually, we have made use of some AHK scripts to automate as many of the monotonous steps as we reliably can.
+
+Once imported into JagEd, we next check to see if the model has held up correctly after being processed twice. Often this can result in some vertex colour data going missing, causing some areas of the model to appear white. This requires only a minor amount of clean up to be ready for the final export!
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/avatar_destruction_walk.gif
+
+While we could use models from 2012 as a starting point for making Old School models, the same could not be said for animations. Despite our attempts, we were unable to make any progress using animations from 2012 or from the present RuneScape. It was looking like we’d have to remake them from scratch, but thankfully other members of the team had seen the early results and were keen to lend their support. Whilst Mod Ry continued work on the environment, Mod West decided to have a crack at using some existing Old School animations with the avatars.
+
+Given that the proportions of the Avatar of Destruction are strangely similar to that of Graador, with only some minor adjustments we could have him moving about. And as you may have guessed from the GIF above, it was a success!
+
+Kind of… the model is essentially exactly how it was back in 2009 (minus some texturing) and adapting the skeleton to that of Graador was fairly simple. However, it would be a lot better if we could get the original animations working, so we’ve tasked the tools team with getting us this feature in the future.
+
+Map, check. Models, check. Animations, check. Things were starting to look pretty good. But Soul Wars is about more than just looking good – we needed it to sound good as well. And as with everything else, we needed it to sound like it did back in 2009. That meant the same music and the same sound effects.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars6.png
+
+Sound effects offered a nice surprise. The way they were made in 2009 was exactly the same way they were made in 2007 and this meant they worked perfectly with Old School! Using our 2012 backup again, we were able to copy the sounds directly across with no changes. Ctrl-C, Ctrl-V, profit! If only it were that simple for everything else.
+
+We also wanted the original Soul Wars music to go alongside the sound effects. Up until late 2012, RuneScape used midi for all of its music. That means, yes, you’ve guessed it, the May 2012 backup had midi files we could use. Unlike sound effects though, some tweaks were needed.
+
+Although midi was still in use when Soul Wars was added in 2009, some new instruments had been added by then that don’t exist in Old School. Luckily, the Soul Wars music track didn’t use any of these, so that midi file worked perfectly. However, The Waiting Game lobby music needed some tweaks, but fortunately Mod Ed had dabbled with Old School music in the past (anyone hunting a Dragon Warhammer may know his Servants of Strife track) and was able to get it working.
+
+Now we were really getting somewhere. We had sound and we had visuals. All we needed now was the game itself and for that we needed some script (plus a few interfaces, of course).
+
+With many of the scripts referencing interfaces which currently don't exist, these needed tackling first. Though the files for these had been retrieved from the 2012 repository, the versions were incompatible and wouldn't compile. However, we were able to open the interfaces in RuneScape’s engine tools to see what's on them, and even copy the contents over with the majority of its data attached. Again, there were models and sprites used in parts of these interfaces (such as the various coloured charms in the Reward Shop) that have never existed in Old School. In these cases we either created it from scratch, adjusted it to work or removed it from the interface.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars7.png
+
+We could then move on to getting the scripts in a working state. Fortunately, although the game's engine has been constantly changing over the years, there were very few new engine features used in the version of Soul Wars that we were using as a basis, so a large part of the script worked almost instantly.
+
+There were a few issues, however, with what we call procedures and labels (what other languages would call functions), as various general use ones that did not exist in Old School were being used. Some were self-explanatory and easy to replicate, whilst others needed us to dive in to the RuneScape repository and see what exactly they were doing. One of the recurring issues that we ran into was the use of constitution and lifepoints rather than hitpoints, requiring us to deal with a separate set of values and a completely different multitude relating to damaging and healing players.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars8.png
+
+After going through and fixing all of the errors, we were ready to jump in and see what exactly we had. Not everything was working perfectly, but at this point we had a very roughly working shell of the minigame that we could jump in to, split up into teams and get running!
+
+There you have it, a working prototype of Soul Wars in Old School RuneScape! The question now is: what next? Although we have a working prototype, it will still take a fair amount of work to get the minigame to a point where it can be released. We believe that with the right resources, it could be possible to release Soul Wars towards the end of the year whilst still delivering the content we promised at RuneFest. Now we just need to decide if we should!
+
+So, do you want to see Soul Wars in Old School? Or would you rather see another piece of content from post-2007? Or maybe you’d prefer we focus only on new content? We want to know your thoughts. Send them our way, and if all goes well, we’ll have more to share with you very soon.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-03-11/SoulWars9.png
