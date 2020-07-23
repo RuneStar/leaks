@@ -1,0 +1,12 @@
+https://twitter.com/SpeedyGreen4/status/1285471575135813632
+https://twitter.com/JagexAsh/status/1285918060025729025
+https://pbs.twimg.com/media/Edh_pZdWAAIbKzf?format=png
+Jul 22, 2020
+
+---
+
+@JagexAsh What is inside the pack folder in the runescript editor, and could you possibly show us what does `mesbox` script look like?
+
+---
+
+The /src (source) folder contains the raw human-readable scripts and models, etc. Those are converted to bytecode by the compiler ("packing") and the result is put in the /pack folder.
