@@ -1,0 +1,127 @@
+https://imgur.com/6ga8AkX
+https://www.reddit.com/user/BAHide
+https://www.runemate.com/community/threads/leaked-internal-jagex-document-update-on-runescape-botting-gold-farming-risk.3380/
+May 9 2015
+
+---
+
+Update on Anti Botting Strategy V4
+
+---
+
+Update on RuneScape Botting & Gold Farming Risk
+
+About Bots
+Some players use automated programs known as Bots to grind on their behalf by performing repetitive tasks for them in game in order to progress with minimal effort and to save significant time and money whilst the Bot accumulates XP and resources on their behalf. Bots are commonly used for commercial exploitation either by Gold Farming or Power Leveling characters skills. Bots also tend to negate the need for free accounts to convert to membership as they provide easier XP generation, increased resource variety and overall improved skill ingredients and granularity. Botting destroys the mechanics of social interaction. Social cohesion, UGC game play and has shown to change the game play from multiplayer social experiences to a very self-focused antisocial single player experience. The practice violates all known MMO’s terms of service.
+
+Bots in RuneScape
+In 2007, when Gold Farming and Botting levels approached similar levels to those experienced today the founders in a desperate response to the issue significantly altered core aspects of the game that facilitated the problem by removing Free Trade and The Wilderness. This was highly effective at stamping out Gold Framing (which was contributing to 90% of all credit card fraud at the time and potentially resulting in multimillion dollar fines from Visa and MasterCard) and moderately effective in reducing Botting in general. However, historical evidence has shown this decision undermined the long term health of the game by removing core game play mechanics resulting in three consecutive years of decline totaling 388,717 subscribers. At the start of 2008 we designed and commenced work on a breakthrough, patentable source code obfuscation and cryptographic tool code named the “Cluster Flutterer” as a formidable response to the most sophisticated and pervasive Bots.
+
+In 2011, Botting and Gold Farming has increased to epidemic proportions since the reintroduction of Free Trade & Wilderness in February this year and has been further amplified by the company shifting the historic focus from retaliating against players to the developers and distributers of Bots instead. Jagex pledged to the community that we would continue to stamp out Botting and Gold Farming as a condition of the return of this much loved content, a bottle we’ve been unable to win until now making community sentiment worse. We had been powerless to adequately tackle the issue at source until now with our upcoming and most meaningful technical countermeasure ever developed to date the “Cluster Flutterer”.
+
+Dangerous Impact on RuneScape
+@daniel_clough: We should be more aggressive in the negative effects that bots have on restoring RuneScape to growth in this section. Our entire strategy and efforts around acquisition, conversion, retention and monetization may not reach their potential and it would also add some risk to the price increase being received well. Also mention that there are very strong feelings within the RS development team and company in general on bots and whilst this is currently being managed, it is becoming a bigger issue every day.
+
+Botting and Gold Farming have a detrimental effect on game integrity, longevity, virility, content, and balancing and crucially result in community attrition. Both also significantly increases support, development and infrastructure costs whilst causing direct financial harm to the business through lost players, revenue, fraud and a reduction in conversion and retention rates, proportional to the scale of the issue. MMO’s require that players spend a significant amount of time in game, something most seem to prize more jealously even than their own money, especially as they get older. Once the game is seen to have lost it integrity due to the majority of players being able to “chat”, the game is no longer perceived as a level player field and the vast majority of players will stop playing due to a perception of “wasting their time” – a point of no return.
+
+We have seen players and fan sites alike rallying the community to boycott paying for membership until the Botting epidemic is cured, in parallel others are attempting to punish Jagex on a different front by coordinating mass boycotting of our nomination for this year’s Gold Joystick Awards, an award we have effortlessly won for Best UK Developer two years in a row but now appears unlikely to even receive an honorable mention this year due to community impact. Our presence on our own social networking channels is no longer a place to discuss the latest updates as the discussion is dominated by players pleading for Jagex to tackle bots. The IT team have also witnessed a tenfold increase in distributed denial of service attacks on our public facing systems and infrastructure. It is estimated that up to 60% of the entire community may be Botting and 40% of all members. 75% of free players Botting are known to be based in China or Korea, the majority of members Botting are based in the West and therefore more likely to be genuine players.
+
+Jagex Response to Bots
+The previous management’s response to the Botting threat was the tactic of player dissuasion by banning all players caught Botting. This only served to punish end users and did little to solve the problem, resulting in a double impact from both lost revenues as well as negative sentiment towards Jagex from those banned, most of which we believe would move to other games taking their friends with them.
+
+Between 2004 to today 5,020,549 free and 516,827 members have been banned for either Botting or Gold Farming. In 2011 only 2015 members were banned as part of our change of focus highlighted below from players to the Bot makers, with only the most vocal and ardent members banned. The current management’s response to this threat is to prosecute and punish the developers, distributors and agents of the Bots rather than the end users, analogous to law enforcement’s tactics in relation to drugs for example. This tactic is not only more effective but significantly more scalable and has the added benefit of preserving significant player goodwill.
+
+Broadly speaking there are three main classes of Bots;
+
+1. Screen Scraping Bots, they work by analyzing the video output for patterns that match a set of criteria such as color, shape, location or specific text and then control the mouse to perform rudimentary game actions. Repeatedly cutting wood & then burning it or mining ore & then dropping it in order to generate XP are classic examples. These Bots are all generally freely distributed and were the first type of Bots seen in RuneScape as early as 2001. This type of Bot is the least effective of the “Botting” methods and only accounts for 2% of all the Bots seen in game by the ICU team.
+
+Existing Countermeasures:
+Combated in game via programmatically making continuous subtle changes to an items color palette, relocation of objects unintelligible to the human eye and most powerfully via random events which completely change the game environment thereby breaking the Bot.
+
+Future Countermeasures:
+They are easy to detect and currently largely ineffective however by destroying the ability of Reflection Bots to penetrate or modify our game code this method is likely to see a resurgence in which case it can be managed via ongoing development of random content events and expansion of image recognition CAPTCHA type challenge techniques already in use.
+
+2. Reflection Bots, commercially sold and well supported Bots that work as a combination of reflection, pre-runtime assembly modification, code modification and injection. Or conceptually simplified to encapsulating the game client and hooking into sections of the client code in order to control all aspects of game client behavior. There are HIGHLY effective and are used to automate every aspect of game play from completion of quests through to generation of wealth, XP and resources. Thereby, effectively negating the need for a player to personally log into the game in order to progress which is just one of the many issues they create.
+
+RSBot and iBot are the two most dominant reflection Bots and combined account for 98% of all Bots in game.
+
+Existing Countermeasures:
+Jagex have developed numerous countermeasures to this class of Bots over the years and it remains a veritable arms race against what are incredibly smart and well-funded companies. From a technical perspective reflection Bots can only be combated via new forms of code obfuscation, cryptography, proprietary libraries and client server protocols and libraries, a formidable combination of which doesn’t exist in any way, shape or form in the software industry and in certain specific areas have not even been contemplated.
+
+In parallel we also currently have an active lawsuit well underway against the makers of iBot which is expected to cost somewhere near $1.4 - $2 million before resolution. iBot is well funded and fighting Jagex every step of the way but we will win this case in the end.
+
+Future Countermeasures:
+We believe the upcoming release of the Cluster Flutterer on the 24th October will be sufficient to permanently prevent this class of Bot working. However should all the existing Bot makers not move to the easier form of screen scraping Bots as predicted but choose to relentlessly attempt to either circumvent or reverse engineer this countermeasure we would expect a safe window between 1 to 3 years before they return.
+
+3. Sweatshops/Gold Farms, predominantly based in China and Korea, providing armies of low or “no” paid people that work around the clock controlling multiple systems at once effectively simulating the work done by Bots by generating in game wealth. The primary means of business is Gold Farming the act of generating and selling in game currency to players in exchange for real world money and to a lesser extend Power Leveling a service of leveling a player’s skills in exchange for real world money. Currently Gold Farmers generate all their wealth on free accounts which is very scalable for them and has little meaningful cost or financial impact if caught by Jagex and subsequently banned. They will periodically launder the wealth generated on Botted free accounts to clean mule accounts and then onto legitimate players for real money. Their presence and significant prevents the commercialization of wealth, items and XP in game (micro transactions) by Jagex. This is also the primary source of credit card fraud both for Jagex and our community. However, Jagex’s new anti-fraud system has proved effective in maintaining credit card fraud below punitive levels.
+
+Existing Countermeasures:
+We currently combat this by detecting and mass banning their accounts and also attempting to disrupt operations by cutting off their ability to receive funds via payment services providers and shutting down their websites via DMCA requests.
+
+Future Countermeasures:
+Upcoming counter measures include requiring membership in order to transfer significant wealth thereby drastically increasing their running costs, providing Jagex with meaningful sanctions. Velocity limiting and blocking of known offending IP ranges and anonymizing proxy services. Email validation for all new accounts created which also has the added benefit of providing higher quality game accounts for marketing purposes.
+
+Risks
+There is the possibility that by breaking 98% of the Bots as a result of the launch of the “Cluster Flutterer” on the 25th October that we could potentially lose a number of members as a result. The team has spent months pouring over various data sets in an attempt to get a sense of the possible quantum or potential adverse impact but no data has proven conclusive. The fundamental risk assumption is based on the fact that a player will quit if they can’t Bot anymore which can’t be substantiated or refuted. Also, because we are unable to detect every case of Botting, this further complicates being able to accurately determine the risk.
+
+We have several indicators that suggest the total number of genuine members that are using bots may total 300K members. We estimate in the worst case scenario 50% of these genuine members could stop paying and playing the game which pegs the number of lost members to potentially be 150K in the worst case scenario. However we believe that this is more probable region to be in the region of 5% to 20% which could equate to somewhere between 15K to 60K lost members.
+
+@mark_gerhard: Richard’s thoughts: “20% seems a lot and also seems scary is we’re saying this is what we think will happy (personally I expect no more than 5% at most and for that to be almost exclusively Chinese accounts), instead why not say that each player will obviously make their own decision as to whether or not to continue player if they can’t bot but the reason they bot in the first place is primarily driven by the desire to progress through the game – they like the game!
+
+The above estimation of the total number of genuine members botting as well as the estimation of those that will stop playing and therefore paying as result of no longer being able to Bot is at best an education assumption and built on numerous other assumptions and therefore it will always be impossible to accurately predict any actual subscriber attrition. Ultimately a western player uses bots in order to progress in the game, because they like the game. It will be a decision for each individual player as to whether they continue playing if Botting is no longer available and as such it is impossible to accurately predict.
+
+Community sentiment is highly negative and at an all-time low. Long serving team members universally believe it substantially trumps the negative sentiment experienced in July 2007 as a result of removing Free Trade & Wilderness.
+
+It has always been believed that there is a core subscriber base of some 500,000 subscribers that have been with the business for a number of years and were unlikely to ever leave. However it is notably this core portion of the community that are being the most vocal and militant about the Bot epidemic and hence the most under threat from attrition if the Bot issue is not adequately addressed as planned.
+
+The future of RuneScape is all about new players coming into the game, not just retaining the existing aging population. Bots are the single greatest threat to attracting and retaining new players. Early evidence is starting to show that Bots are adversely affecting the funnel and potentially negating retention and win back initiatives.
+
+Absolutely everyone close to the business agrees on the fact that not responding quickly and decisively and continuing to fight bots as we have always done will mean that most of our efforts to restore the game to growth will be undermined, alongside our ability to retain existing players and crucially return the game to sustained growth.
+
+This major botting presence in game pulls against every funnel initiative we launch from acquisition to conversion, retention and win back. With community goodwill towards Jagex being at an all-time low the announcement of a price increase has the potential to receive a hostile reception.
+
+Finally, it is important to note the ONLY truly permanent solution to the issue of Botting and Gold Farming is to remove the very reason for their existence, by selling XP boosts, Gold and Resources directly to the players (micro transactions) which is currently under assessment by the RuneScape Design team. It is critical that Jagex use the upcoming Bot Free Window to assess and implement a permanent solution to this problem.
+
+Recent/Upcoming Bot and Gold Farming busting initiatives
+- 16th August, 1.5 Million Gold Farming accounts banned of which 220k were active players
+
+- 12th September, blocking of in-game spam messages selling gold and power leveling services
+
+- 11th October, Communications to community about ongoing fight against Bots and to stay posted for upcoming improvements
+
+- 21st October, rollout of TopLayer 10G IPS and DDOS defense systems to all data centers
+
+- 25th October, Launch “Cluster Flutterer” and numerous other Bot busting updates.
+
+Block account creation from IP address and anonymous proxies use by known Gold Farmers and Power levelers. Velocity checks in place for accounts farmed in Asia.
+
+Move to Java JVM 1.6 CodeBase and Remove Unsigned Mode which subsequently forces bot makers to update their deobfuscation tool and allows us to deploy more advanced counter measures in the future. This has the added benefit of simplifying game engine development and allows the game to look and play better as well.
+
+Mandatory Email Validation on New accounts before entry to game is permitted. This is a marketing initiative but will help with slowing down bulk account creation from gold farmers and provide better accounts for marketing.
+
+Right click reporting for players: Allows easy reporting for hard to spell account names.
+
+- 25th October to 1st November, Double XP Week for Community to celebrate nuking Bots and attract players back into the game during a seasonal low.
+
+- 15th November, Email Domain in blocking currently only a Backup to Cluster Flutterer as it won’t be needed if Cluster Flutterer works as expected.
+
+- 13th December, Update to game that requires Free Players to become Members before they can transfer wealth to other Members thereby reducing Gold Farming by making it uneconomical and potentially benefiting Jagex with an increase in subscribers.
+
+- Ongoing strategic review, assessment of content to completely eliminate the market for Gold Farming, Botting and Power Leveling by providing in-game Micro Transactions.
+
+Appendix A
+
+About the Cluster Flutterer
+This attempts to generally explain the outline working principles in as non-technical terms as possible. Numerous other techniques in terms of evasion, validation, data signatures, salt, cryptography and vector reduction and complexity multiplication are not covered due to both their highly sensitive nature.
+
+The Cluster Flutterer is the internal code name for our second generation proprietary Java source code obfuscation (randomization, transforming and obscuring of the original source) tool, it works as part of the compilation process by rearranging client code as much as possible whilst ensuring it still runs. It’s designed to make it impossible for Humans and Software alike to inspect or modify RuneScape’s client code. More specifically, it’s revolutionary in how it obfuscates the code’s data structures, which we’ve been unable to obfuscate in the past (we don’t know of any 3rd party tools capable of this type of obfuscation). This builds on the earlier project called the JavaFlutterer which encrypts code strings and obfuscates the code’s instructions but not the data structures. It launched several years ago and left Aryan the first ever reflection Bot dead in the water. No bots have managed to crack it but instead some evolved by building some very smart software to heuristically hook into a different portion of the unobfuscated code instead, namely the data structures. Once we’ve obfuscated those, we are of the strong belief that they won’t be able to function any more.
+
+Currently we do a full game update approximately once a week with the content update. This update normally includes a re-obfuscation of our engine source. We will increase the frequency of these engine updates to somewhere between daily and weekly, depending on the success of the process. By doing this we create massive surge of work for the bot authors (potentially in the middle of their night) where they need to de-obfuscate our newly released source. We think that this, in conjunction with the Cluster Flutterer, and the next measure, below, will make the process untenable for Bot authors.
+
+Multiple Clients, when new engine source is currently released to the players, in the form of the game client, there is only one instance of the code which every player uses and hence only one problem for the Bot makers to attempt to solve. We will instead shift to releasing a variable number of game clients (depending on the time available before each release, but ideally in the hundreds each time). Each game client will be locked to the Internet address the player is coming from. This means that in order to release a working Bot for everyone, the authors must first get hold of all the various client permutations, perform their de-obfuscation process many hundreds of times, possibly every day. Their natural response for this is to try to automate the process (which will be very hard indeed), however by doing this they run the risk of not spotting ‘traps’ we place in individual game clients to allow us to identify bot users.
+
+The Cluster Flutterer will continue to undergo further R&D. After its initial launch the JavaFlutterer’s algorithms will be gradually migrated into it for ease of maintenance and better usability. The Cluster Flutterer is far better designed and generates much more useful messages if its input needs tweaking (which significantly helps the rest of the game engine team) than the previous version, and can easily be enhanced with further obfuscation algorithms in the future, should they ever be needed.
+
+Similar techniques will be employed to combat the screen scraping bots down the line with CAPTCHA type techniques.
+
+The Cluster Flutterer is a clear candidate for an entire portfolio of patents although we need to carefully consider the potential impact of this as a fundamental element of the products effectiveness is that the Bot makers don’t know what our code is doing or how it’s actually working, both of which would eventually be undermined by patent applications.

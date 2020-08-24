@@ -1,0 +1,28 @@
+https://twitter.com/Skretzo/status/1172086097020706817
+https://twitter.com/JagexAsh/status/1172090733593014272
+https://pbs.twimg.com/media/EEQaTyXXkAE35vs?format=png
+Sep 12, 2019
+
+---
+
+@JagexAsh I am curious how shops are defined in the game code, e.g. Horvik's Armour Shop. Do they look somewhat similar to item definitions, some of which you have shown earlier?
+
+---
+
+Each line is Item, default stock, restock time in server ticks.
+
+---
+
+Thank you! May I ask what size=40 means?
+
+---
+
+Maximum number of slots in the shop. Which is unnecessarily high here since different items can't be sold to it, but it's relevant for general stores.
+
+---
+
+Final question: where is the item cost increase/decrease when buying/selling defined?
+
+---
+
+Depends on the code that opens the individual shop.

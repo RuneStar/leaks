@@ -1,0 +1,19 @@
+https://twitter.com/SpeedyGreen4/status/1288748987881852928
+https://twitter.com/JagexAsh/status/1288842262684880896
+Jul 30, 2020
+
+---
+
+@JagexAsh Is there a trigger type for when a player walks on a specific tile? Some tiles like Al-Kharid stops the movement when you walk on it. How do you handle such a thing?
+
+---
+
+There are various types of trigger. A common one is the "mapzone" one, called when a player enters the 64x64 blocks of maptiles that form our mapsquares. Those are pretty well known since music tends to be triggered off them.
+
+---
+
+Is there also a trigger for map tiles? Or do you have to place a check that runs every tick somewhere to check if the player or an NPC is on X tile?
+
+---
+
+Custom ones can be added for individual tiles.
