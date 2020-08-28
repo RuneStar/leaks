@@ -1,0 +1,29 @@
+https://twitter.com/SpeedyGreen4/status/1287698981380853760
+https://twitter.com/JagexAsh/status/1287736146718588930
+https://pbs.twimg.com/media/Ed71MvHWoAADoSj?format=png
+Jul 27, 2020
+
+---
+
+@JagexAsh Could you possibly show us a snippet that's utilising `label` as a parameter? Similar to the labels you passed to "multi5" command in one of the screenshots you posted sometime ago.
+
+---
+
+Here's the other end of that, then:
+
+---
+
+Thanks. I assume you cannot pass arguments to labels then when using jump?
+
+---
+
+Correct. The jump() command can only call a label that expects no arguments. If the label does expect input arguments, the @ syntax must be used instead.
+jump() is thus redundant, but is still supported for legacy reasons.
+
+---
+
+So you can just do "@$label1" instead of jump($label1)?
+
+---
+
+Ah, good point - we'd not be able to use the @ notation on a label that's in a variable. It's not a particularly common way of writing script though I'm relatively fond of the approach myself.
