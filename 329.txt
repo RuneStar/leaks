@@ -1,0 +1,9 @@
+https://discord.com/channels/177206626514632704/269673599554551808/674297971663437884
+
+---
+
+if (finduid(~loot_choosehero) = true)
+
+---
+
+inzone(0_42_148_0_0,0_42_149_63_63,coord) = ^true

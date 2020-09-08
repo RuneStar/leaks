@@ -1,0 +1,13 @@
+https://discord.com/channels/177206626514632704/269673599554551808/724389745991614554
+
+---
+
+that would be consistent with the code we actually have for mossy keys
+
+---
+
+if ((%slayer_target = ^slayer_target_mossgiants & %slayer_count > 0 & random(75) = 0) | random(150) =0)
+
+---
+
+this is from before the wilderness additions

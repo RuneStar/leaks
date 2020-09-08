@@ -1,0 +1,7 @@
+https://discordapp.com/channels/177206626514632704/424846377621651456/752266879996788756
+
+---
+
+    else if ($dropint < 98) ~lootdrop(npc_type,npc_coord,~randomherb,^lootdrop_duration);
+    else if ($dropint < 120 & map_members = ^true) ~lootdrop(npc_type,npc_coord,bolt,add(random(11),2),^lootdrop_duration);
+}

@@ -1,0 +1,9 @@
+https://discord.com/channels/177206626514632704/269673599554551808/679473885112172643
+
+---
+
+I think there's max 2 slayer categories for a monster
+
+---
+
+$slayerdrop = ~slayer_wilderness_extrarolls($droppos,npc_basestat(hitpoints),npc_category,npc_param(slayer_category),npc_param(slayer_category2),npc_param(slayer_bossID));

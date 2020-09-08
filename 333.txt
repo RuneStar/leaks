@@ -1,0 +1,27 @@
+https://discordapp.com/channels/177206626514632704/269673599554551808/738349217394982988
+
+---
+
+as soon as I read it, I knew exactly why it'd be the case - it should theoretically be the same both ways on all bones, but a couple of bones have other use interactions that interfere
+
+Basically, when you use items on each other, let's say using item A on item B, there's a "trigger" on item B, which looks up what item A is to decide what to do.
+
+We can also define those interactions on types of items, so if item B has a defined type, it'll go to that piece of script... Unless there's a specific interaction on that exact item defined, too.
+
+So we've got an interaction defined for items of type bones, but a couple of bones have their own interactions defined that don't fall through to the type interaction.
+
+do you have to define that on both the jar and the bone file?
+
+Basically, yeah, we have an [opheldu,_bones] (category for bones) and an [opheldu,jar_of_decay] (or whatever the config name is), and in the _bones one check if the item is the jar, if so, run the script - in the jar one check if the item has category bones, if so, run the script.
+
+Add in the fact that there's an [opheldu,bat_bones] and you find that using them on the jar works, but using the jar on the bones gets caught up in that trigger, instead of the category one.
+
+oh, so there's actually an opheldu for item categories?
+
+There can be, yeah - and in the case of bones there is one.
+
+Yeah, just one category, but they can have all kinds of parameters too which could interfere. Not quite as plainly as categories do, but still.
+
+and there's some sort of router that prioritizes item-specific opheldu over category opheldu?
+
+Yeah, we've got a sort of concept of specificity, in the same way as CSS goes ID > class > element, we go specific type > category > "everything"

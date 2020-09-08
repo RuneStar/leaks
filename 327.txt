@@ -1,0 +1,24 @@
+https://discord.com/channels/177206626514632704/424846377621651456/685405225833463819
+
+---
+
+spot the bug
+
+---
+
+if ($random < 20)
+{
+  ~lootdrop(npc_type,npc_coord,iron_ore,5,^lootdrop_duration);
+}
+if ($random < 35)
+{
+  ~lootdrop(npc_type,npc_coord,iron_ore,2,^lootdrop_duration);
+}
+else if ($random < 40)
+{
+  ~lootdrop(npc_type,npc_coord,silver_ore,1,^lootdrop_duration);
+}
+else if ($random < 60)
+{
+  ~lootdrop(npc_type,npc_coord,cave_goblin_mining_helmet_unlit,1,^lootdrop_duration);
+}

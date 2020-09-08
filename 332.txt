@@ -1,0 +1,19 @@
+https://discordapp.com/channels/177206626514632704/269673599554551808/738912362634936381
+
+---
+
+While we're on the topic of runescript, do the dots here have any significance?
+
+---
+
+Yeah, the dots basically refer to a second NPC. We can easily have two NPCs in focus at any time (an NPC and a .NPC), is the short of it.
+
+---
+---
+
+that's near the very first line of the ShadesilverDrop  routine
+
+---
+---
+
+Oh, you're right - yeah, I'd mistaken it for being add(1,random(sub(153,%done))), rather than add(1,sub(random(153),%done)).
