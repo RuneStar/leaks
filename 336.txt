@@ -1,0 +1,10 @@
+https://discord.com/channels/177206626514632704/424846377621651456/758471728967057409
+
+---
+
+here's an example line from black dragons:
+
+---
+
+if (random(~deadman_quad_chance(5000)) = 0)
+    ~lootdrop(npc_type,npc_coord,dragonfire_visage,1,^lootdrop_duration);

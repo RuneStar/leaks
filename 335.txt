@@ -1,0 +1,22 @@
+https://twitter.com/SpeedyGreen4/status/1303153042712342529
+https://twitter.com/JagexAsh/status/1303605432229994496
+Sep 9, 2020
+
+---
+
+@JagexAsh What symbols are normally allowed when defining a script or a config name? Is it the same as all the other languages or do you also allow for more symbols to be used such as the plus or the colon symbols?
+
+---
+
++ is allowed, and is commonly used for poisons.
+_ is also allowed, and is extremely common.
+- is treated as _.
+We can't use ; and the : is used only when defining interface components.
+
+---
+
+Is the reason you guys put a space after switch case identifiers because the compiler thinks the : is part of the name?
+
+---
+
+The compiler does require that, though I'm pretty sure it requires it for types that aren't OBJ names too, even INTs where the colon couldn't possibly have been part of it.
