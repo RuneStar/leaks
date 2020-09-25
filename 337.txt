@@ -1,0 +1,16 @@
+https://secure.runescape.com/m=news/gielinor-gazette-september-2020?oldschool=1
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-09-25/Gazette4.png
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-09-25/Gazette5.png
+25 September 2020
+
+---
+
+Having so many tasks to implement can be quite time consuming. Fortunately, we have means to create the data for these tasks really quickly. A task in the back-end system looks like this:
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-09-25/Gazette4.png
+'Catch 100 Lobsters' Task in the back-end code.
+
+Because all of the tasks have the same parameters, we can quite quickly write a script in Python that takes an Excel document of all the tasks and then get it to write this very repetitive RuneScript for us. Then it's simply a matter of going into the appropriate script and adding the following code to complete a task should the player satisfy the conditions.
+
+https://cdn.runescape.com/assets/img/external/oldschool/2020/newsposts/2020-09-25/Gazette5.png
+Plugging in the completion of the Catch 100 Lobsters Task.
