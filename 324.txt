@@ -1,7 +1,10 @@
 https://twitter.com/SpeedyGreen4/status/1287698981380853760
 https://twitter.com/JagexAsh/status/1287736146718588930
+https://twitter.com/JagexAsh/status/1311705716894429191
 https://pbs.twimg.com/media/Ed71MvHWoAADoSj?format=png
+https://pbs.twimg.com/media/EjQdXNSXYAIuiDb?format=png
 Jul 27, 2020
+Oct 1, 2020
 
 ---
 
@@ -27,3 +30,11 @@ So you can just do "@$label1" instead of jump($label1)?
 ---
 
 Ah, good point - we'd not be able to use the @ notation on a label that's in a variable. It's not a particularly common way of writing script though I'm relatively fond of the approach myself.
+
+---
+
+Would it be possible to see p_choice5? I'm curious how it's able to return one of the defined values based on the players pick.
+
+---
+
+Alright, here it is:
