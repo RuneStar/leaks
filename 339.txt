@@ -1,0 +1,15 @@
+https://twitter.com/JagexAsh/status/1345372952750141442
+https://pbs.twimg.com/media/Equ5aYYXIAADewy?format=png
+Jan 2, 2021
+
+---
+
+The developer's intention, in Death to the Dorgeshuun, was very clearly for Bob to be racist.
+
+---
+
+I noticed the ~.chatnpcnoturn and was wondering if you'd be able to share that script? From my knowledge that would run code on a "secondary" npc?
+
+---
+
+That's what a . would mean on a command. In this case, it's actually just part of the name of a procedure (a "proc") - the developer could have used any name for the procedure, but chose a name that indicates that it'll contain commands involving the "secondary" NPC.
