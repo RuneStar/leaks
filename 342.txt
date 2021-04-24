@@ -1,0 +1,20 @@
+https://twitter.com/GauCho88664610/status/1260001153699504131
+https://twitter.com/JagexAsh/status/1260248329902047234
+https://pbs.twimg.com/media/EX1NLIcWAAQdCMg?format=png
+May 12, 2020
+
+---
+
+@jagexash Heya! Would you be willing to share a list of all permitted values for huntmode?
+
+---
+
+I'm not sure what you're referring to as a "value" here. There are a few dozen custom ones defined, with different settings for what trigger they call when they find a target, what kind of NPC/LOC/OBJ they seek, and whether to consider changing target after finding one.
+
+---
+
+I was hoping for a list of labels so that we could try to categorize npc behaviour on the wiki. I was looking for possible values you could write while defining an npc. For example, one such valid huntmode "value" would be "aggressive_melee".
+
+---
+
+Alright, here's the main ones:
