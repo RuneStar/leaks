@@ -1,0 +1,6 @@
+https://discord.com/channels/177206626514632704/177832494136033280/766518640731750401
+
+---
+
+if (%mm2_progress >= 195) ~lootdrop(npc_type,npc_coord,dragon_javelin_head,10,^lootdrop_duration);
+else ~lootdrop(npc_type,npc_coord,coins,330,^lootdrop_duration);

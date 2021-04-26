@@ -1,0 +1,11 @@
+https://discord.com/channels/177206626514632704/269673599554551808/767765457771692053
+
+---
+
+Mod Lenny: pretty sure I've written little bits of dialogue that should never possibly occur
+
+---
+
+Mod Lenny: I try to make it fitting, in the event that it does come up!
+
+~chatplayer("<p,quiz>Maybe I shouldn't go down there just yet... Who knows just what lurks below?");
