@@ -1,0 +1,23 @@
+https://twitter.com/monogataricel/status/1388388690322460672
+https://twitter.com/JagexAsh/status/1388493113283551241
+https://pbs.twimg.com/media/E0TrGGkWUAMkK93?format=png
+May 1, 2021
+
+---
+
+@JagexAsh do you have an example of how the music tab is handled in runescript? I am curious as to how you map the button presses to songs
+
+---
+
+Music tracks are in an internal list with numerical indices in that list. Each button has a numerical ID that maps to the index of the song it's due to trigger.
+
+---
+
+Thanks! Also, in the case of your "enum", you're accessing it with "last_comsubid" and you've got the trigger "if_button1" - what would happen if you tried to use "last_comsubid" without the proper trigger?
+
+would it just error as undefined or is there a default value in engine?
+
+---
+
+That pointer would be set automatically; it contains info about which button called the 'if_button' trigger.
+Scripts can refer to last_comsubid only if they come from a trigger that sets that pointer, otherwise the compiler would reject it at compile-time.
